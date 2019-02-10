@@ -1,0 +1,8 @@
+{application, emqx_dashboard, [
+	{description, "EMQ X Dashboard"},
+	{vsn, "3.0"},
+	{modules, []},
+	{registered, []},
+	{applications, [kernel, stdlib, minirest, clique, emqx]},
+	{mod, {emqx_dashboard_app, []}}
+]}.
