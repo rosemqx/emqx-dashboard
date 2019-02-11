@@ -3,8 +3,6 @@
 	{vsn, "4.2"},
 	{modules, []},
 	{registered, [emqx_dashboard_sup]},
-	{applications, [kernel, stdlib, minirest, clique, emqx, minirest]},
-    {licenses, ["Apache-2.0"]},
-    {maintainers, ["EMQ X Team <contact@emqx.io>"]},
+	{applications, [kernel, stdlib, minirest, clique, emqx_management]},
 	{mod, {emqx_dashboard_app, []}}
 ]}.
