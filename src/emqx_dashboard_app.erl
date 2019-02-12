@@ -28,8 +28,10 @@ start(_StartType, _StartArgs) ->
     {ok, Sup} = emqx_dashboard_sup:start_link(),
     emqx_dashboard:start_listeners(),
     emqx_dashboard_cli:load(),
+    ekka_mnesia:start(),
     {ok, Sup}.
 
 stop(_State) ->
+    ekka_mnesia:stop(),
     emqx_dashboard_cli:unload(),
     emqx_dashboard:stop_listeners().
