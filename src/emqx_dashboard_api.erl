@@ -72,6 +72,7 @@
 
 -define(EMPTY(V), (V == undefined orelse V == <<>>)).
 
+auth(_Bindings, Params) when is_map(Params) -> auth(_Bindings, maps:to_list(Params));
 auth(_Bindings, Params) ->
     Username = proplists:get_value(<<"username">>, Params),
     Password = proplists:get_value(<<"password">>, Params),
