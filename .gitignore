@@ -23,3 +23,5 @@ rebar.lock
 _build/
 *.conf.rendered
 .rebar3/
+.applist
+**/Mnesia*/**
