@@ -11,9 +11,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+            - name: dialyzer
+              run: rebar3 dialyzer
             - name: run test cases
-              run: |
-                make xref
-                make eunit
-                make ct
-                make cover
+              run: rebar3 do eunit, ct
