@@ -28,18 +28,23 @@ a{font-weight:700}.left-bar .bar-footer a img{width:20px;height:20px;border:none
 .top-area .topbar-right .help-link a.active{color:#34c388}.topbar .top-area .topbar-right
 .el-button{width:135px;border-radius:40px;border-width:2px;margin-left:20px;font-size:14px;font-weight:400;line-height:15px;background:transparent}.topbar
 .top-area .topbar-right .el-button.enterprise-btn{color:#34c388;border-color:#34c388}.topbar .top-area .topbar-right .el-button.enterprise-btn
-.icon-arrow{position:relative;top:1px}.topbar .top-area .topbar-right .el-button.github-btn{color:#adafb4;border-color:#adafb4}
-.topbar .top-area .topbar-right .el-button--medium{padding:9px 20px}.overview-view
-*{padding:0;margin:0;box-sizing:border-box}.overview-view .el-select .el-input__inner{padding-left:10px}.overview-view
-.card-box{position:relative;margin-top:74px}.overview-view .card-box
-.card-title{position:absolute;height:24px;line-height:24px;width:100%;top:-34px;left:0;font-size:16px}.overview-view .card-box
-.el-table{margin-top:0}.overview-view .card-box .el-table .caret-wrapper{left:-8px}.overview-view .card-box .el-table--medium td,.overview-view
-.card-box .stats-table.el-table--medium th{padding:4px 0}@media screen and (max-width:1280px){.overview-view .card-box
-.el-col-6{width:50%!important;margin-top:10px!important}}@media screen and (max-width:740px){.overview-view .card-box
-.el-col-6{width:100%!important;margin-top:10px!important}}.overview-view .card-box .broker-card.el-row{overflow-x:auto}.overview-view .card-box
-.broker-card .el-col .card-item{height:90px;min-width:250px;line-height:90px;padding:18px 20px 0;border-radius:4px}.overview-view .card-box
-.broker-card .el-col .card-item .icon{float:left;width:54px;height:54px;line-height:50px;text-align:center;border:2px
-solid;border-radius:50%}.overview-view .card-box .broker-card .el-col .card-item .icon i{font-size:26px}.overview-view .card-box .broker-card .el-col
+.icon-arrow{position:relative;top:1px}
+.topbar .top-area .topbar-right .el-button.github-btn{color:#adafb4;border-color:#adafb4}
+.topbar .top-area .topbar-right .el-button--medium{padding:9px 20px}
+.overview-view *{padding:0;margin:0;box-sizing:border-box}
+.overview-view .el-select .el-input__inner{padding-left:10px}
+.overview-view .card-box{position:relative;margin-top:74px}
+.overview-view .card-box .card-title{position:absolute;height:24px;line-height:24px;width:100%;top:-34px;left:0;font-size:16px}
+.overview-view .card-box .el-table{margin-top:0}
+.overview-view .card-box .el-table .caret-wrapper{left:-8px}
+.overview-view .card-box .el-table--medium td,.overview-view
+.card-box .stats-table.el-table--medium th{padding:4px 0}
+@media screen and (max-width:1280px){.overview-view .card-box .el-col-6{width:50%!important;margin-top:10px!important}}
+@media screen and (max-width:740px){.overview-view .card-box .el-col-6{width:100%!important;margin-top:10px!important}}
+.overview-view .card-box .broker-card.el-row{overflow-x:auto}
+.overview-view .card-box .broker-card .el-col .card-item{height:90px;min-width:250px;line-height:90px;padding:18px 20px 0;border-radius:4px}
+.overview-view .card-box .broker-card .el-col .card-item .icon{float:left;width:54px;height:54px;line-height:50px;text-align:center;border:2px solid;border-radius:50%}
+.overview-view .card-box .broker-card .el-col .card-item .icon i{font-size:26px}.overview-view .card-box .broker-card .el-col
 .card-item .desc{line-height:normal;float:right;text-align:right;height:70px}.overview-view .card-box .broker-card .el-col .card-item .desc
 h3{font-size:14px;font-weight:700}.overview-view .card-box .broker-card .el-col .card-item .desc p{margin-top:12px;max-width:150px}.overview-view
 span{line-height:10px}.overview-view .box-card,.overview-view .el-row{margin-top:20px}
