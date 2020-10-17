@@ -180,7 +180,7 @@ check(Username, Password) ->
 
 init([]) ->
     %% Add default admin user
-    add_default_user(binenv(default_user_username), binenv(default_user_passwd)),
+    _ = add_default_user(binenv(default_user_username), binenv(default_user_passwd)),
     {ok, state}.
 
 handle_call(_Req, _From, State) ->
