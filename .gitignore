@@ -25,3 +25,4 @@ _build/
 .rebar3/
 .applist
 **/Mnesia*/**
+.gitmodules
