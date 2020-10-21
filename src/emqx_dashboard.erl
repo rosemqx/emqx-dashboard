@@ -18,55 +18,66 @@
 -behaviour(application).
 -behaviour(supervisor).
 
-% -include_lib("nitro/include/nitro.hrl").
--include_lib("n2o/include/n2o.hrl").
--include_lib("kvs/include/kvs.hrl").
 -include_lib("emqx/include/emqx.hrl").
-% -include_lib("emqx/include/logger.hrl").
+-include_lib("emqx/include/logger.hrl").
 
 -import(proplists, [get_value/3]).
 
--export([start/2 ,stop/1, init/1, event/1]).
+-export([start/2 ,stop/1, init/1]).
 
-% application supervisor
+% application, supervisor
 init(_Args) ->
-    Spec = #{id => emqx_dashboard_admin,
+    Admin = #{id => emqx_dashboard_admin,
             start => {emqx_dashboard_admin, start_link, []},
             restart => permanent,
             shutdown => 5000,
             type => worker,
             modules => [emqx_dashboard_admin]},
-    {ok, { {one_for_all, 10, 100}, [Spec] } }.
+
+    % ownership transfered to ranch?
+    io:format("Static spec: ~p~n", [Admin]),
+
+    {ok, { {one_for_one, 10, 100}, [Admin] }}.
 
 start(_StartType, _StartArgs) ->
     ok = ekka_mnesia:start(),
     kvs:join(),
     n2o:start_mqtt(),
-    lists:foreach(fun(Listener) -> start_listener(Listener) end, listeners()),
+    Dispatch = cowboy_router:compile([{'_', [
+        { "/n2o/[...]",     cowboy_static,  { dir, "deps/n2o/priv", mime() }},
+        { "/nitro/[...]",   cowboy_static,  { dir, "deps/nitro/priv/js", mime() }},
+        { "/app/[...]",     cowboy_static,  { dir, "priv/static", mime() }},
+        { "/app/[...]",     cowboy_static,  { dir, "priv/static", mime() }}
+        ] ++ minirest:handlers([{"/api/v4/[...]", minirest, http_handlers()}])
+    }]),
+
+    Opts = [{port, application:get_env(n2o, port, 18083)}],
+    % Opts = #{
+    %     connection_type => worker,
+    %     handshake_timeout => 10000,
+    %     max_connections => 1000,
+    %     num_acceptors => 100,
+    %     shutdown => 5000,
+    %     socket_opts => [{port, 18083}]
+    % },
+
+    cowboy:start_clear('http:board', Opts, #{env => #{dispatch => Dispatch}}),
+
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 stop(_State) ->
     ekka_mnesia:stop(),
-    lists:foreach(fun(Listener) -> stop_listener(Listener) end, listeners()).
+    ranch:stop_listener('http:board').
 
-% pi
-event(init) ->
-    %nitro:update(sailor, #button{id=sailor, body= <<"hello, sailor!">>, postback=sail});
-    ok;
-event(sail) -> io:format("sail~n");
-event(E)    -> io:format("not handled event ~p.~n", [E]).
+mime()   -> [ { mimetypes, cow_mimetypes, all } ].
 
 %% Start HTTP Listener
 start_listener({Proto, Port, Options}) when Proto == http ->
-    Dispatch = [{"/", cowboy_static, {file, "priv/www/index.html", []}},
-                {"/static/[...]", cowboy_static, {dir, "priv/www/static", [{mimetypes, cow_mimetypes, all}]}},
-                {"/api/v4/[...]", minirest, http_handlers()}],
+    Dispatch = [{"/api/v4/[...]", minirest, http_handlers()}],
     minirest:start_http(listener_name(Proto), ranch_opts(Port, Options), Dispatch);
 
 start_listener({Proto, Port, Options}) when Proto == https ->
-    Dispatch = [{"/", cowboy_static, {priv_file, emqx_dashboard, "www/index.html"}},
-                {"/static/[...]", cowboy_static, {priv_dir, emqx_dashboard, "www/static"}},
-                {"/api/v4/[...]", minirest, http_handlers()}],
+    Dispatch = [{"/api/v4/[...]", minirest, http_handlers()}],
     minirest:start_https(listener_name(Proto), ranch_opts(Port, Options), Dispatch).
 
 ranch_opts(Port, Options0) ->
@@ -100,7 +111,7 @@ listener_name(Proto) ->
 
 http_handlers() ->
     Plugins = lists:map(fun(Plugin) -> Plugin#plugin.name end, emqx_plugins:list()),
-    Cfg = #{apps => Plugins, modules => [], filter => fun filter/1, except => undefined},
+    Cfg = #{apps => Plugins, modules => [], filter => fun filter/1, except => []},
     Hnd = minirest_handler:init(Cfg),
     [{"/api/v4/", Hnd,[{authorization, fun is_authorized/1}]}].
 

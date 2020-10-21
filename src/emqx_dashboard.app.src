@@ -3,6 +3,6 @@
 	{vsn, "2.10"},
 	{modules, []},
 	{registered, [emqx_dashboard]},
-	{applications, [kernel, stdlib, syn, n2o, mnesia, kvs, nitro, minirest, clique, emqx_management, emqx]},
+	{applications, [kernel, stdlib, syn, n2o, mnesia, kvs, nitro, minirest, clique, emqx_management, emqx, emqtt]},
 	{mod, {emqx_dashboard, []}}
 ]}.
