@@ -25,7 +25,7 @@
 
 -export([start/2 ,stop/1, init/1]).
 
-% application, supervisor
+% app/sup
 init(_Args) ->
     Admin = #{id => emqx_dashboard_admin,
             start => {emqx_dashboard_admin, start_link, []},
@@ -34,15 +34,6 @@ init(_Args) ->
             type => worker,
             modules => [emqx_dashboard_admin]},
 
-    % ownership transfered to ranch?
-    io:format("Static spec: ~p~n", [Admin]),
-
-    {ok, { {one_for_one, 10, 100}, [Admin] }}.
-
-start(_StartType, _StartArgs) ->
-    ok = ekka_mnesia:start(),
-    kvs:join(),
-    n2o:start_mqtt(),
     Dispatch = cowboy_router:compile([{'_', [
         { "/n2o/[...]",     cowboy_static,  { dir, "deps/n2o/priv", mime() }},
         { "/nitro/[...]",   cowboy_static,  { dir, "deps/nitro/priv/js", mime() }},
@@ -51,18 +42,22 @@ start(_StartType, _StartArgs) ->
         ] ++ minirest:handlers([{"/api/v4/[...]", minirest, http_handlers()}])
     }]),
 
-    Opts = [{port, application:get_env(n2o, port, 18083)}],
-    % Opts = #{
-    %     connection_type => worker,
-    %     handshake_timeout => 10000,
-    %     max_connections => 1000,
-    %     num_acceptors => 100,
-    %     shutdown => 5000,
-    %     socket_opts => [{port, 18083}]
-    % },
+    Opts = #{
+        connection_type => worker,
+        handshake_timeout => 10000,
+        max_connections => 1000,
+        num_acceptors => 100,
+        shutdown => 5000,
+        socket_opts => [{port, application:get_env(n2o, port, 18083)}]
+    },
+    Spec = ranch:child_spec('http:board', ranch_tcp, Opts, cowboy_clear, #{env => #{dispatch => Dispatch}}),
 
-    cowboy:start_clear('http:board', Opts, #{env => #{dispatch => Dispatch}}),
+    {ok, { {one_for_one, 10, 100}, [Admin, Spec] }}.
 
+start(_StartType, _StartArgs) ->
+    ok = ekka_mnesia:start(),
+    kvs:join(),
+    n2o:start_mqtt(),
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 stop(_State) ->
@@ -71,47 +66,13 @@ stop(_State) ->
 
 mime()   -> [ { mimetypes, cow_mimetypes, all } ].
 
-%% Start HTTP Listener
-start_listener({Proto, Port, Options}) when Proto == http ->
-    Dispatch = [{"/api/v4/[...]", minirest, http_handlers()}],
-    minirest:start_http(listener_name(Proto), ranch_opts(Port, Options), Dispatch);
-
-start_listener({Proto, Port, Options}) when Proto == https ->
-    Dispatch = [{"/api/v4/[...]", minirest, http_handlers()}],
-    minirest:start_https(listener_name(Proto), ranch_opts(Port, Options), Dispatch).
-
-ranch_opts(Port, Options0) ->
-    NumAcceptors = get_value(num_acceptors, Options0, 4),
-    MaxConnections = get_value(max_connections, Options0, 512),
-    Options = lists:foldl(fun({K, _V}, Acc) when K =:= max_connections orelse K =:= num_acceptors ->
-                              Acc;
-                             ({inet6, true}, Acc) -> [inet6 | Acc];
-                             ({inet6, false}, Acc) -> Acc;
-                             ({ipv6_v6only, true}, Acc) -> [{ipv6_v6only, true} | Acc];
-                             ({ipv6_v6only, false}, Acc) -> Acc;
-                             ({K, V}, Acc)->
-                              [{K, V} | Acc]
-                          end, [], Options0),
-    #{num_acceptors => NumAcceptors,
-      max_connections => MaxConnections,
-      socket_opts => [{port, Port} | Options]}.
-
-stop_listener({Proto, _Port, _}) ->
-    minirest:stop_http(listener_name(Proto)).
-
-listeners() ->
-    application:get_env(?MODULE, listeners, []).
-
-listener_name(Proto) ->
-    list_to_atom(atom_to_list(Proto) ++ ":dashboard").
-
 %%--------------------------------------------------------------------
 %% HTTP Handlers and Dispatcher
 %%--------------------------------------------------------------------
 
 http_handlers() ->
     Plugins = lists:map(fun(Plugin) -> Plugin#plugin.name end, emqx_plugins:list()),
-    Cfg = #{apps => Plugins, modules => [], filter => fun filter/1, except => []},
+    Cfg = #{apps => [emqx_dashboard | Plugins], modules => [], filter => fun filter/1, except => []},
     Hnd = minirest_handler:init(Cfg),
     [{"/api/v4/", Hnd,[{authorization, fun is_authorized/1}]}].
 
@@ -136,4 +97,11 @@ is_authorized(_Path, Req) ->
                     false
             end;
          _  -> false
+    end.
+
+filter(#{app := emqx_dashboard}) -> true;
+filter(#{app := App}) ->
+    case emqx_plugins:find_plugin(App) of
+        false -> false;
+        Plugin -> Plugin#plugin.active
     end.

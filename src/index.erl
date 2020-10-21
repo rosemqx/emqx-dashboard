@@ -8,7 +8,6 @@
 % pi
 event(init) ->
     n2o:reg(n2o:sid()),
-    io:format("init"),
     nitro:update(sail, #button{id=sail, body= <<"hello, sailor!">>, postback=sail});
 
 event(sail) -> 
