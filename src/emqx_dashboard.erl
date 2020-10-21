@@ -15,29 +15,45 @@
 %%--------------------------------------------------------------------
 
 -module(emqx_dashboard).
+-behaviour(application).
+-behaviour(supervisor).
 
 -include_lib("emqx/include/emqx.hrl").
 -include_lib("emqx/include/logger.hrl").
 
 -import(proplists, [get_value/3]).
 
--export([ start_listeners/0
-        , stop_listeners/0
+-export([ start/2
+        , stop/1
+        , init/1
         ]).
 
--define(APP, ?MODULE).
+init(_Args) ->
+    Spec = #{id => emqx_dashboard_admin,
+            start => {emqx_dashboard_admin, start_link, []},
+            restart => permanent,
+            shutdown => 5000,
+            type => worker,
+            modules => [emqx_dashboard_admin]},
+    {ok, { {one_for_all, 10, 100}, [Spec] } }.
+
+start(_StartType, _StartArgs) ->
+    ok = ekka_mnesia:start(),
+    lists:foreach(fun(Listener) -> start_listener(Listener) end, listeners()),
+    supervisor:start_link({local, ?MODULE}, ?MODULE, []).
+
+stop(_State) ->
+    ekka_mnesia:stop(),
+    lists:foreach(fun(Listener) -> stop_listener(Listener) end, listeners()).
 
 %%--------------------------------------------------------------------
 %% Start/Stop listeners.
 %%--------------------------------------------------------------------
 
-start_listeners() ->
-    lists:foreach(fun(Listener) -> start_listener(Listener) end, listeners()).
-
 %% Start HTTP Listener
 start_listener({Proto, Port, Options}) when Proto == http ->
-    Dispatch = [{"/", cowboy_static, {priv_file, emqx_dashboard, "www/index.html"}},
-                {"/static/[...]", cowboy_static, {priv_dir, emqx_dashboard, "www/static"}},
+    Dispatch = [{"/", cowboy_static, {file, "priv/www/index.html", []}},
+                {"/static/[...]", cowboy_static, {dir, "priv/www/static", [{mimetypes, cow_mimetypes, all}]}},
                 {"/api/v4/[...]", minirest, http_handlers()}],
     minirest:start_http(listener_name(Proto), ranch_opts(Port, Options), Dispatch);
 
@@ -63,14 +79,11 @@ ranch_opts(Port, Options0) ->
       max_connections => MaxConnections,
       socket_opts => [{port, Port} | Options]}.
 
-stop_listeners() ->
-    lists:foreach(fun(Listener) -> stop_listener(Listener) end, listeners()).
-
 stop_listener({Proto, _Port, _}) ->
     minirest:stop_http(listener_name(Proto)).
 
 listeners() ->
-    application:get_env(?APP, listeners, []).
+    application:get_env(?MODULE, listeners, []).
 
 listener_name(Proto) ->
     list_to_atom(atom_to_list(Proto) ++ ":dashboard").
@@ -81,7 +94,9 @@ listener_name(Proto) ->
 
 http_handlers() ->
     Plugins = lists:map(fun(Plugin) -> Plugin#plugin.name end, emqx_plugins:list()),
-    [{"/api/v4/", minirest:handler(#{apps => Plugins, modules => []}),[{authorization, fun is_authorized/1}]}].
+    Cfg = #{apps => Plugins, modules => [], filter => fun filter/1, except => undefined},
+    Hnd = minirest_handler:init(Cfg),
+    [{"/api/v4/", Hnd,[{authorization, fun is_authorized/1}]}].
 
 %%--------------------------------------------------------------------
 %% Basic Authorization

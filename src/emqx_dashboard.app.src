@@ -2,7 +2,7 @@
 	{description, "EMQ X Dashboard"},
 	{vsn, "4.2"},
 	{modules, []},
-	{registered, [emqx_dashboard_sup]},
-	{applications, [kernel, stdlib, minirest, ssl, emqx_management]},
-	{mod, {emqx_dashboard_app, []}}
+	{registered, [emqx_dashboard]},
+	{applications, [kernel, stdlib, minirest, clique, minirest, emqx_management, emqx]},
+	{mod, {emqx_dashboard, []}}
 ]}.
