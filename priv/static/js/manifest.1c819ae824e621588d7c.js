@@ -5,7 +5,7 @@
             r[d]&&u.push(r[d][0]),
             r[d]=0;
         for(f in t)
-            Object.prototype.hasOwnProperty.call(t,f)&&(e[f]=t[f]);
+            Object.prototype.hasOwnProperty.call(t,f) && (e[f]=t[f]);
         for(c&&c(n,t,o);u.length;)u.shift()();
         if(o)for(i=0;i<o.length;i++)b=a(a.s=o[i]);
         return b

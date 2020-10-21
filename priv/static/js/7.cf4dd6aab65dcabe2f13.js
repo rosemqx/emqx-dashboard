@@ -60,8 +60,8 @@ webpackJsonp([7],{
                     s("el-menu",{attrs:{
                         mode:"vertical",
                         router:"",
-                        "background-color":"#242327",
-                        "text-color":"#A6A6A8",
+                        //"background-color":"#242327",
+                        //"text-color":"#A6A6A8",
                         "active-text-color":"#34C388",
                         "default-active":"/"+t.$route.path.split("/")[1]}
                         },[
@@ -115,9 +115,7 @@ webpackJsonp([7],{
         };
         var L={
             name:"home-view",
-            components:{
-                Leftbar:i("VU/8")(u,o,!1,function(t){i("TmgP")},null,null).exports
-            }
+            components:{ Leftbar:i("VU/8")(u,o,!1,function(t){i("TmgP")},null,null).exports }
         },
         M={
             render:function(){
