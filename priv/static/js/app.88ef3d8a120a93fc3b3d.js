@@ -43,14 +43,9 @@ new o.default({el:"#app",
     template:"<App/>"})},
 UVIz:function(e,t){},
 VOAv:function(e,t,n){
-    "use strict";function s(e){
-        e=["dark-themes","light-themes"].includes(e) ? 
-        e: "dark-themes",
-        document.querySelector("html").setAttribute("class",e)
-    }
-    function a(){
-        s(localStorage.getItem("themes")||"dark-themes")
-    }
+    "use strict";
+    function s(e){}
+    function a(){}
     n.d(t,"a",function(){return a}),
     n.d(t,"b",function(){return s})
 },
