@@ -1,8 +1,8 @@
 {application, emqx_dashboard, [
-	{description, "EMQ X Dashboard"},
-	{vsn, "4.2"},
+	{description, "ERP.UNO MQ Dashboard"},
+	{vsn, "2.10"},
 	{modules, []},
 	{registered, [emqx_dashboard]},
-	{applications, [kernel, stdlib, minirest, clique, minirest, emqx_management, emqx]},
+	{applications, [kernel, stdlib, syn, n2o, mnesia, kvs, nitro, minirest, clique, emqx_management, emqx]},
 	{mod, {emqx_dashboard, []}}
 ]}.

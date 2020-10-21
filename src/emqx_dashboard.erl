@@ -18,16 +18,17 @@
 -behaviour(application).
 -behaviour(supervisor).
 
+% -include_lib("nitro/include/nitro.hrl").
+-include_lib("n2o/include/n2o.hrl").
+-include_lib("kvs/include/kvs.hrl").
 -include_lib("emqx/include/emqx.hrl").
--include_lib("emqx/include/logger.hrl").
+% -include_lib("emqx/include/logger.hrl").
 
 -import(proplists, [get_value/3]).
 
--export([ start/2
-        , stop/1
-        , init/1
-        ]).
+-export([start/2 ,stop/1, init/1, event/1]).
 
+% application supervisor
 init(_Args) ->
     Spec = #{id => emqx_dashboard_admin,
             start => {emqx_dashboard_admin, start_link, []},
@@ -39,6 +40,8 @@ init(_Args) ->
 
 start(_StartType, _StartArgs) ->
     ok = ekka_mnesia:start(),
+    kvs:join(),
+    n2o:start_mqtt(),
     lists:foreach(fun(Listener) -> start_listener(Listener) end, listeners()),
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
@@ -46,9 +49,12 @@ stop(_State) ->
     ekka_mnesia:stop(),
     lists:foreach(fun(Listener) -> stop_listener(Listener) end, listeners()).
 
-%%--------------------------------------------------------------------
-%% Start/Stop listeners.
-%%--------------------------------------------------------------------
+% pi
+event(init) ->
+    %nitro:update(sailor, #button{id=sailor, body= <<"hello, sailor!">>, postback=sail});
+    ok;
+event(sail) -> io:format("sail~n");
+event(E)    -> io:format("not handled event ~p.~n", [E]).
 
 %% Start HTTP Listener
 start_listener({Proto, Port, Options}) when Proto == http ->
