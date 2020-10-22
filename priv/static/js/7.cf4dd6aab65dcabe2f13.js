@@ -23,7 +23,8 @@ webpackJsonp([7],{
                     {id:"plugins",title:this.$t("leftbar.plugins"),index:"/plugins",icon:"icon-kongjian"},
                     {id:"modules",title:this.$t("leftbar.modules"),index:"/modules",icon:"icon-changjingguanli"},
                     {id:"tools",title:this.$t("leftbar.tools"),icon:"icon-gongju1",
-                        children:[{id:"websocket",title:this.$t("leftbar.websocket"),index:"/websocket"},
+                        children:[
+                            {id:"websocket",title:this.$t("leftbar.websocket"),index:"/websocket"},
                             {id:"http_api",title:this.$t("leftbar.api"),index:"/http_api"}]},
                             {id:"settings",title:this.$t("leftbar.settings"),index:"/settings",icon:"icon-icon_shezhi"},
                             {id:"general",title:this.$t("leftbar.general"),icon:"icon-fenzuguanli",
