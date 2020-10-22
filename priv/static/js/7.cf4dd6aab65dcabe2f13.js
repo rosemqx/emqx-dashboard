@@ -60,8 +60,6 @@ webpackJsonp([7],{
                     s("el-menu",{attrs:{
                         mode:"vertical",
                         router:"",
-                        //"background-color":"#242327",
-                        //"text-color":"#A6A6A8",
                         "active-text-color":"#34C388",
                         "default-active":"/"+t.$route.path.split("/")[1]}
                         },[

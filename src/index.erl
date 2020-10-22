@@ -8,9 +8,12 @@
 % pi
 event(init) ->
     n2o:reg(n2o:sid()),
-    nitro:update(sail, #button{id=sail, body= <<"hello, sailor!">>, postback=sail});
+    
+    nitro:update(sail, #panel{body=[
+        #input{id=in1},
+        #button{id=sail, body= <<"hello, sailor!">>, source=[in1], postback= sail}
+    ]});
 
 event(sail) -> 
-    io:format("sail~n"),
     nitro:update(sail, #button{id=sail, body= <<"done!">>, postback=sail});
 event(E)    -> io:format("not handled event ~p.~n", [E]).
