@@ -306,7 +306,9 @@ var r=[
         {path:"/plugins/:pluginName",name:"pluginsName",component:function(){return Promise.all([n.e(2),n.e(0)]).then(n.bind(null,"zCPI"))}},
         {path:"/modules",name:"modules",component:function(){return n.e(6).then(n.bind(null,"fnGs"))}},
         {path:"/listeners",name:"listeners",component:function(){return n.e(19).then(n.bind(null,"uuOo"))}},
-        {path:"/websocket",name:"websocket",component:function(){return Promise.all([n.e(4),n.e(0)]).then(n.bind(null,"EzHP"))}},
+        {path:"/websocket",name:"websocket",component:function(){
+            return Promise.all([n.e(4),n.e(0)]).then(n.bind(null,"EzHP"))
+        }},
         {path:"/http_api",name:"http_api",component:function(){return n.e(9).then(n.bind(null,"qB/b"))}},
         {path:"/applications",name:"applications",component:function(){return n.e(21).then(n.bind(null,"Tk0c"))}},
         {path:"/users",name:"users",component:function(){return n.e(10).then(n.bind(null,"QSR2"))}},
