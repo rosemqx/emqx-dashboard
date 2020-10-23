@@ -338,7 +338,12 @@ EzHP:function(t,e,n) {
                 var t=this;if(this.client.connected){s.a.start();var e={qos:this.publishQos,retain:this.publishRetain};this.sending=!0,this.client.publish(this.publishTopic,this.publishMessage,e,function(e){e?(s.a.done(),t.$message.error(e.toString())):(t.publishedMessages.unshift({message:t.publishMessage,topic:t.publishTopic,qos:t.publishQos,time:t.now()}),t.$message.success(t.$t("websocket.messageSendOut")),s.a.done())})}else this.$message.error(this.$t("websocket.connectLeave"))
             },
             mqttCacheScuscribe:function(t){
-                var e=this;this.client.connected?this.client.unsubscribe(t,function(n){n?e.$message.error(e.$t("websocket.unsubscribeFailure")+" "+n.toString()+"!"):e.subscriptions.forEach(function(n,r){n.topic===t&&e.subscriptions.splice(r,1)})}):this.$message.error(this.$t("websocket.connectLeave"))
+                var e=this;this.client.connected ? 
+                    this.client.unsubscribe(t,function(n){n ? 
+                        e.$message.error(e.$t("websocket.unsubscribeFailure")+" "+n.toString()+"!") : 
+                        e.subscriptions.forEach(function(n,r){n.topic===t&&e.subscriptions.splice(r,1)})}
+                    ) :
+                    this.$message.error(this.$t("websocket.connectLeave"))
             },
             handleReconnect:function(){
                 if(this.retryTimes>1){try{this.sending?this.$message.error(this.$t("websocket.connectError")):this.$message.error(this.$t("websocket.connectFailure")+" "+this.host+":"+this.port)}catch(t){this.retryTimes=0,this.sending=!1,this.loading=!1,s.a.done(),this.client.end(),this.client={}}return this.retryTimes=0,this.sending=!1,this.loading=!1,s.a.done(),this.client.end(),void(this.client={})}this.sending&&this.$message.error(this.$t("websocket.connectError")),this.retryTimes+=1
