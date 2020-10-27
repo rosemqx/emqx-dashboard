@@ -17,7 +17,8 @@ webpackJsonp([20],{
         a={render:function(){
             var t=this,e=t.$createElement,s=t._self._c||e;
             return s("div",{staticClass:"help-view"},[
-                s("div",{staticClass:"page-title"},[t._v(t._s(t.$t("leftbar.help")))]),
+                s("div",{staticClass:"page-title"},[
+                    t._v(t._s(t.$t("leftbar.help")))]),
                 t._v(" "),
                 s("div",{staticClass:"help-item"},[
                     s("h3",[t._v(t._s(t.$t("help.quickStart")))]),

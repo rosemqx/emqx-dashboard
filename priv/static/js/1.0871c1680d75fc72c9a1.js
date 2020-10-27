@@ -1,4 +1,13 @@
-webpackJsonp([1],{"3WKI":function(e,t){},zXyA:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s=a("Dd8w"),i=a.n(s),l=a("zL8q"),n=a("NYxO"),o={name:"data-view",components:{"el-pagination":l.Pagination,"el-input":l.Input,"el-select":l.Select,"el-option":l.Option,"el-table":l.Table,"el-table-column":l.TableColumn,"el-date-picker":l.DatePicker},data:function(){
+webpackJsonp([1],{
+    "3WKI":function(e,t){},
+    zXyA:function(e,t,a){
+        "use strict";
+        Object.defineProperty(t,"__esModule",{value:!0});
+        var s=a("Dd8w"),
+            i=a.n(s),
+            l=a("zL8q"),
+            n=a("NYxO"),
+            o={name:"data-view",components:{"el-pagination":l.Pagination,"el-input":l.Input,"el-select":l.Select,"el-option":l.Option,"el-table":l.Table,"el-table-column":l.TableColumn,"el-date-picker":l.DatePicker},data:function(){
     return {
         searchView:!1,cluster:!1,popoverVisible:!1,count:0,hasnext:!1,params:{_page:1,_limit:10},nodeName:"",nodes:[],activeTab:"clients",searchKey:"",searchValue:"",searchPlaceholder:this.$t("clients.clientId"),clients:[],fuzzyParams:{comparator:"_gte",match:"_match_topic"},topics:[],subscriptions:[],showMoreQuery:!1,
     protoNames:["MQTT","MQTT-SN","CoAP","LwM2M"]
