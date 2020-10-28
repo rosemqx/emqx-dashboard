@@ -8,7 +8,8 @@ webpackJsonp([7],{
         var L={ name:"home-view" },
         M={
             render:function(){
-                var t=this.$createElement,e=this._self._c||t;
+                var t=this.$createElement,
+                    e=this._self._c||t;
                 return e("div",{staticClass:"home-view"},[
                     e("RouterView")
                 ],1)

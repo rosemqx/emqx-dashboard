@@ -24,94 +24,224 @@ webpackJsonp([23],{
             vuex:"^3.1.1","vuex-router-sync":"^5.0.0"
         },
         devDependencies:{
-            autoprefixer:"^7.1.2","babel-core":"^6.22.1","babel-eslint":"^8.2.1","babel-helper-vue-jsx-merge-props":"^2.0.3","babel-loader":"^7.1.1","babel-plugin-dynamic-import-node":"^2.2.0","babel-plugin-syntax-jsx":"^6.18.0","babel-plugin-transform-runtime":"^6.22.0","babel-plugin-transform-vue-jsx":"^3.5.0","babel-polyfill":"^6.26.0","babel-preset-env":"^1.3.2","babel-preset-stage-2":"^6.22.0",chalk:"^2.0.1","copy-webpack-plugin":"^4.0.1","css-loader":"^0.28.0",eslint:"^4.15.0","eslint-config-airbnb-base":"^11.3.0","eslint-friendly-formatter":"^3.0.0","eslint-import-resolver-webpack":"^0.8.3","eslint-loader":"^1.7.1","eslint-plugin-import":"^2.7.0","eslint-plugin-vue":"^4.0.0","extract-text-webpack-plugin":"^3.0.0","file-loader":"^1.1.4","friendly-errors-webpack-plugin":"^1.6.1","html-webpack-plugin":"^2.30.1","monaco-editor-webpack-plugin":"^1.7.0","node-notifier":"^5.1.2","node-sass":"^4.8.3","optimize-css-assets-webpack-plugin":"^3.2.0",ora:"^1.2.0",portfinder:"^1.0.13","postcss-import":"^11.0.0","postcss-loader":"^2.0.8","postcss-url":"^7.2.1",rimraf:"^2.6.0","sass-loader":"^6.0.7",semver:"^5.3.0",shelljs:"^0.7.6","uglifyjs-webpack-plugin":"^1.1.1","url-loader":"^0.5.8","vue-loader":"^13.7.3","vue-style-loader":"^3.0.1","vue-template-compiler":"^2.5.2",webpack:"3.8.0","webpack-bundle-analyzer":"^3.3.2","webpack-dev-server":"2.9.7","webpack-merge":"^4.1.0"},engines:{node:">= 6.0.0",npm:">= 3.0.0"},browserslist:["> 1%","last 2 versions","not ie <= 8"]}},"HL/F":function(e,t,n){"use strict";var s=n("Dd8w"),a=n.n(s),o=n("wUZ8"),i=n.n(o),r=a()({},i.a,{select:{cluster:"All Nodes",placeholder:"Select Node"},error:{networkError:"Network Error",initializationError:"Initialization Error",module_not_loaded:"Related module are not load"},success:{createSuccess:"Create Success"},oper:{confirmDelete:"Confirm Delete ?",confirmStop:"Confirm Stop?",cancel:"Cancel",confirm:"Confirm",delete:"Delete",oper:"Operation",edit:"Edit",save:"Save",create:"Create",view:"View",viewMore:"View More",expand:"Expand",collapse:"Collapse",refresh:"Refresh",add:"Add",addSuccess:"Add Success",editSuccess:"Edit success",startSuccess:"Start Success",stopSuccess:"Stop Success",enableSuccess:"Enable Success",disabledSuccess:"Disable Success",deleteSuccess:"Delete Success",disconnectSuccess:"Disconnect Success",from:"From",stop:"Stop",start:"Start",
-            notice:"Notice",
-            confirmDisconnect:"Confirm disconnect?",confirmKickOut:"Confirm kick out?",confirmCleanSession:"Confirm Clean Session?",yes:"Yes",no:"No",online:"Online",offline:"Offline",warning:"Warning",subscribe:"Subscribe",unsubscribe:"Unsubscribe",unsubscribeConfirm:"This action will cancel subscription to the topic",pleaseEnter:"Please Enter",copy:"Copy",copySuccess:"Copy successfully",copyFailed:"Copy failed",generate:"Generate",search:"Search",reset:"Reset",next:"Next",prev:"Previous"},
-leftbar:{
-    overview:"Overview",
-    connections:"Connections",
-    sessions:"Sessions",
-    management:"Management",
-    instances:"Instances",
-    admin:"Admin"
-},
-overview:{
-    broker:"Broker",
-    erlangOTPRelease:"Erlang/OTP Release",
-    systemName:"System Name",
-    version:"Version",
-    uptime:"Uptime",
-    systemTime:"System Time",
-    nodes:"Nodes",name:"Name",
-    erlangProcesses:"Erlang Processes",
-    cpuInfo:"CPU Info",
-    memoryInfo:"Memory Info",
-    maxFds:"MaxFds",
-    status:"Status",
-    stats:"Stats",
-    topicsCount:"Topics",
-    topicsMax:"Max",
-    connectionsCount:"Connections",
-    connectionsMax:"Max",
-    retainedCount:"Retained",
-    retainedMax:"Max",
-    sessionsCount:"Sessions",
-    sessionsMax:"Max",
-    subscribersCount:"Subscribers",
-    subscribersMax:"Max",subscriptionsCount:"Subscriptions",subscriptionsMax:"Max",subscriptionsSharedCount:"Subscriptions Shared",subscriptionsSharedMax:"Max",metrics:"Metrics",packetsData:"The packets data",messagesData:"The messages data",bytesData:"The bytes data",session:"Session",client:"Client",delivery:"Delivery"},clients:{node:"Node",nodeName:"Node Name",clientId:"Client ID",username:"Username",ipAddr:"IP Address",port:"Port",cleanStart:"CleanStart",keepalive:"Keepalive(s)",back:"Back",subscriptionsCount:"Subscriptions Count",expiryInterval:"Expiry Interval(s)",maxInflight:"MaxInflight",inflightLen:"Inflight Len",mqueueLen:"MqueueLen",mqueueDropped:"MqueueDropped",awaitingRelLen:"AwaitingRelLen",deliverMsg:"DeliverMsg",enqueueMsg:"EnqueueMsg",createdAt:"Created At",connectedAt:"Connected At",connected:"Connect Status",basicInfo:"Basic Info",subsInfo:"Subscriptions",protoVer:"ProtoVer",protoName:"Protocol Name",protoType:"Protocol",connectInfo:"Connection",isBridge:"Is Bridge",disconnectAt:"Disconnect At",session:"Session",max:"Maximum",historicHigh:"Historic High of",subscriptions:"Subscriptions Count",inflight:"Inflight Window Size",mqueue:"Message Queue Size",awaiting_rel:"Unconfirmed PUBREC Packets Count",recv_cnt_desc:"Number of TCP Packets Received",recv_msg_desc:"Number of PUBLISH Packets Received",recv_oct_desc:"Number of Bytes Received",recv_pkt_desc:"Number of MQTT Packets Received",send_cnt_desc:"Number of TCP Packets Sent",send_msg_desc:"Number of PUBLISH Packets Sent",send_oct_desc:"Number of Bytes Sent",send_pkt_desc:"Number of MQTT Packets Sent",currentSubs:"Subscriptions Count",addSubs:"Add Subscription",view:"View",disconnected:"Disconnected",kickOut:"Kick Out"},topics:{topic:"Topic",node:"Node"},subscriptions:{clientId:"Client ID",topic:"Topic",qoS:"QoS",share:"Share"},plugins:{name:"Name",version:"Version",description:"Description",status:"Status",stopped:"Stopped",running:"Running",oper:"Operation",start:"Start",stop:"Stop",config:"Config",manage:"Manage",tutorial:"Tutorial",back:"Back",advancedConfig:"Advanced Config",add:"Add",configSuccess:"Config success",configFailure:"Config failure",notice:"Are you sure you want to submit changes and apply them ?",giveUpNotice:"Are you sure you want to give up the change and exit?",noticeTitle:"Notice",cacheNotice:"You have given up this change",emptyConfigOption:"No Default Configuration",searchByName:"Search by plugin name",
-    usernameRequired:"username is required",
-    passwordRequired:"password is required",clientidRequired:"Client ID is required",algorithm:"Algorithm",secret:"Secret or Private key",payloadDesc:"It is valid when verify_claims is enabled. You can use% u and% c placeholders to replace the entered user name and clientid respectively. For details, see",jwtDoc:"JWT Authentication",dataDesc:"One line is a set of data, separated by comma username,clientid",secretRequired:"Secret is required",payloadRequired:"Payload template is required",dataRequired:"Payload data is required",leaveTokenPage:"After leaving the page, the currently entered configuration and generated TOKEN information are no longer retained. Continue?"},modules:{name:"Name",enable:"Enable",disable:"Disable",enabled:"Enabled",disabled:"Disabled"},instances:{instances:"Instances",back:"Back",info:"Basic Info",name:"instance name",descr:"description",service:"service",configInfo:"Config Options",initConfig:"Init config or ",remarkConfig:"description is required",createInstance:"Create Instance",selectServiceType:"Instance Type",all:"All",running:"Running",stopped:"Stopped",auth:"Auth",backend:"Backend",hook:"hook",bridge:"Bridge",other:"Other",select:"Select",selected:"Selected",nextStep:"Next",authDesc:"Provide login authentication and publish subscribe ACL service.",backendDesc:"Provide message persistence to database services.",bridgeDesc:"Bridging a message flow into a message middleware data source.",hookDesc:"A service that uses the trigger callback mechanism to respond to the operation.",otherDesc:"The system runs information and other services."},listeners:{protocol:"Protocol",listenOn:"Listen On",maxConnections:"Max Connections",currentConnections:"Current Connections"},websocket:{connect:"Connect",host:"Host",port:"Port",clientID:"Client ID",username:"Username",password:"Password",keepAlive:"Keep Alive",cleanSession:"Clean Session",disconnect:"Disconnect",currentState:"Current State",subscribe:"Subscribe",topic:"Topic",qoS:"QoS",date:"Date",oper:"Operation",messages:"Messages",retained:"Retained",send:"send",messagesAlreadySent:"Messages already sent",messagesReceived:"Messages received",time:"Time",connectError:"Message send error",connectFailure:"Connect failed on",connectLeave:"The client does not connect to the broker",subscribeSuccess:"Subscribe success",subscribeFailure:"Subscribe failure",unsubscribeFailure:"Unsubscribe Failure",messageSendOut:"Message send out",connected:"CONNECTED",connecting:"CONNECTING",disconnected:"DISCONNECTED",notSupport:"Your browser doesn't support WebSocket"},httpApi:{introduction:"Introduction",desc:"Apart from this help page, all URIs will serve only resources of type application/json, and will require HTTP basic authentication. The default user is admin / public.\n<br/>The emqx_dashboard plugin provides a web management console. The Dashboard helps monitor broker's running status, statistics and metrics of MQTT packets.",reference:"Reference",method:"Method",path:"Path",description:"Description",back:"Back",linkAddress:"Request address",data:"Response data"},app:{appId:"AppID",secret:"AppSecret",newApp:"New App",viewApp:"View App",editApp:"Edit App",create:"Create",errors:"Option Required",name:"AppName",desc:"Remark",expired:"Expired date",status:"Status",enable:"Allowed",disable:"Denied",enableText:"Access allowed",disableText:"Access barred",expiredText:"Never expired",guide:"Application for authentication of EMQ X Management API (REST API)",docs:"Documentation"},users:{newUser:"New User",editUser:"Edit User",username:"Username",remark:"Remark",password:"Password",confirmPassword:"Confirm Password",oldPassword:"Old Password",newPassword:"New Password",confirmNewPassword:"Confirm New Password",changePassword:"Change Password",dontChangePassword:"Don't Change Password",confirm:"Confirm",confirmDelete:"Confirm Delete ?",usernameRequired:"Username required",remarkRequired:"Remark required",usernameIllegal:"Username length: 3~32",passwordRequired:"Password required",newPasswordRequired:"new password required",passwordInconsistent:"Password is inconsistent",authenticate:"You have changed your password. Please re authenticate",createUser:"Create user success",passwordIllegal:"Password length: 3~255"},alert:{required:"required",success:" success",failure:" failure",connect:"Connect"},
-    login:{
-        title:"LOG IN",
-        username:"Username",
-        password:"Password",
-        remember:"Remember",
-        loginButton:"Log In",
-        error:"Username Or Password Error",usernameRequired:"Username Required",passwordRequired:"Password Required"},
-settings:{
-    language:"Language",
-    apply:"Apply",
-    success:"Apply success"
-},
-config:{importConfig:"Import",
-selectConfigFile:"Select a config file",
-configFileMustBeJson:"Config file must be JSON",
-createBy:"Create by",
-create:"",
-createUser:"owner",
-nodeName:"node name",
-host:"host",
-descr:"description",
-createAt:"create At",
-more:"more",
-reSelect:"Select another",
-not_a_valid_config_file:"Not a valid config file",
-payload_error:"Config option is empty",
-import_file_error:"Import failure",
-exportConfig:"Export",
-ex:"Export",
-atLeastThree:"At least three words",
-importSuccess:"Import success",
-notice:"Use backup configuration files to configure initialization modification. <br/> Notice: configuration files may contain important data, such as database address and authentication information. Please keep good configuration files and use backup function reasonably."},
-help:{
-    quickStart:"Quick start",
-    emqxDesc:"EMQ X is a MQTT broker developed on the Erlang/OTP platform, which is the most popular MQTT message middleware in the open source community. It supports common IoT protocols, including MQTT, LwM2M, MQTT-SN, CoAP, LoRaWAN, HTTP, and WebSocket. Welcome to follow our project or participate in development.",
-    useDocs:"Documentation",
-    docsDesc:"We have prepared a comprehensive documentation to help you familiarize yourself with more powerful features.",
-    forwardView:"View documentation"    
-},
-analysis:{topicMetrics:"Topic metrics",metricsTip:"(The metrics are real-time refresh data, including all statistics since the addition)",messageIn:"Message In",messageOut:"Message Out",messageDrop:"Message Drop",addTopic:"Add Topic",details:"Details",all:"All",rateItem:"{0} / second",rate:"(rate)",
-messageInDesc:"(message in rate)",
-messageOutDesc:"(message out rate)",
-messageDropDesc:"(message drop rate)",
-loadAnalysis:"Load",
-loadSuccess:"Load Success"},
-httpCode:{0:"Success",101:"Bad RPC",102:"Unknown Error",103:"Username or password error",104:"Empty username or password",105:"User does not exist",106:"Admin can not be deleted",107:"Missing request parameter",108:"Request parameter type error",109:"Request parameter is not a json",
-    110:"Plugin has been loaded",111:"Plugin has been unloaded",112:"Client not online",
-    113:"User already exist",114:"Old password error",115:"Bad topic"
-},
-util:{day:"day | days",year:"year | years"}}),
-c=n("Vi3T"),l=n.n(c),u=a()({},l.a,{
+            autoprefixer:"^7.1.2","babel-core":"^6.22.1","babel-eslint":"^8.2.1","babel-helper-vue-jsx-merge-props":"^2.0.3","babel-loader":"^7.1.1","babel-plugin-dynamic-import-node":"^2.2.0","babel-plugin-syntax-jsx":"^6.18.0","babel-plugin-transform-runtime":"^6.22.0","babel-plugin-transform-vue-jsx":"^3.5.0","babel-polyfill":"^6.26.0","babel-preset-env":"^1.3.2","babel-preset-stage-2":"^6.22.0",chalk:"^2.0.1","copy-webpack-plugin":"^4.0.1","css-loader":"^0.28.0",eslint:"^4.15.0","eslint-config-airbnb-base":"^11.3.0","eslint-friendly-formatter":"^3.0.0","eslint-import-resolver-webpack":"^0.8.3","eslint-loader":"^1.7.1","eslint-plugin-import":"^2.7.0","eslint-plugin-vue":"^4.0.0","extract-text-webpack-plugin":"^3.0.0","file-loader":"^1.1.4","friendly-errors-webpack-plugin":"^1.6.1","html-webpack-plugin":"^2.30.1","monaco-editor-webpack-plugin":"^1.7.0","node-notifier":"^5.1.2","node-sass":"^4.8.3","optimize-css-assets-webpack-plugin":"^3.2.0",ora:"^1.2.0",portfinder:"^1.0.13","postcss-import":"^11.0.0","postcss-loader":"^2.0.8","postcss-url":"^7.2.1",rimraf:"^2.6.0","sass-loader":"^6.0.7",semver:"^5.3.0",shelljs:"^0.7.6","uglifyjs-webpack-plugin":"^1.1.1","url-loader":"^0.5.8","vue-loader":"^13.7.3","vue-style-loader":"^3.0.1","vue-template-compiler":"^2.5.2",webpack:"3.8.0","webpack-bundle-analyzer":"^3.3.2","webpack-dev-server":"2.9.7","webpack-merge":"^4.1.0"},
+            engines:{node:">= 6.0.0",npm:">= 3.0.0"},
+            browserslist:["> 1%","last 2 versions","not ie <= 8"]
+        }
+    },
+    "HL/F":function(e,t,n){
+        "use strict";
+        var s=n("Dd8w"),a=n.n(s),o=n("wUZ8"),i=n.n(o),r=a()({},i.a,{
+            select:{cluster:"All Nodes",placeholder:"Select Node"},
+            error:{
+                networkError:"Network Error",
+                initializationError:"Initialization Error",module_not_loaded:"Related module are not load"
+            },
+            success:{createSuccess:"Create Success"},
+            oper:{
+                confirmDelete:"Confirm Delete ?",confirmStop:"Confirm Stop?",
+                cancel:"Cancel",confirm:"Confirm",delete:"Delete",oper:"Operation",edit:"Edit",save:"Save",
+                create:"Create",view:"View",viewMore:"View More",expand:"Expand",collapse:"Collapse",refresh:"Refresh",add:"Add",
+                addSuccess:"Add Success",editSuccess:"Edit success",startSuccess:"Start Success",stopSuccess:"Stop Success",enableSuccess:"Enable Success",disabledSuccess:"Disable Success",deleteSuccess:"Delete Success",disconnectSuccess:"Disconnect Success",from:"From",stop:"Stop",start:"Start",
+                    notice:"Notice",
+                    confirmDisconnect:"Confirm disconnect?",
+                    confirmKickOut:"Confirm kick out?",
+                    confirmCleanSession:"Confirm Clean Session?",
+                    yes:"Yes",no:"No",online:"Online",offline:"Offline",warning:"Warning",
+                    subscribe:"Subscribe",unsubscribe:"Unsubscribe",
+                    unsubscribeConfirm:"This action will cancel subscription to the topic",
+                    pleaseEnter:"Please Enter",copy:"Copy",copySuccess:"Copy successfully",
+                    copyFailed:"Copy failed",generate:"Generate",search:"Search",reset:"Reset",next:"Next",prev:"Previous"
+            },
+            leftbar:{
+                overview:"Overview",
+                connections:"Connections",
+                sessions:"Sessions",
+                management:"Management",
+                instances:"Instances",
+                admin:"Admin"
+            },
+            overview:{
+                broker:"Broker",
+                erlangOTPRelease:"Erlang/OTP Release",
+                systemName:"System Name",
+                version:"Version",
+                uptime:"Uptime",
+                systemTime:"System Time",
+                nodes:"Nodes",name:"Name",
+                erlangProcesses:"Erlang Processes",
+                cpuInfo:"CPU Info",
+                memoryInfo:"Memory Info",
+                maxFds:"MaxFds",
+                status:"Status",
+                stats:"Stats",
+                topicsCount:"Topics",
+                topicsMax:"Max",
+                connectionsCount:"Connections",
+                connectionsMax:"Max",
+                retainedCount:"Retained",
+                retainedMax:"Max",
+                sessionsCount:"Sessions",
+                sessionsMax:"Max",
+                subscribersCount:"Subscribers",
+                subscribersMax:"Max",subscriptionsCount:"Subscriptions",subscriptionsMax:"Max",subscriptionsSharedCount:"Subscriptions Shared",subscriptionsSharedMax:"Max",metrics:"Metrics",packetsData:"The packets data",messagesData:"The messages data",bytesData:"The bytes data",
+                session:"Session",client:"Client",delivery:"Delivery"
+            },
+            clients:{
+                node:"Node",
+                nodeName:"Node Name",clientId:"Client ID",username:"Username",ipAddr:"IP Address",
+                port:"Port",cleanStart:"CleanStart",keepalive:"Keepalive(s)",back:"Back",
+                subscriptionsCount:"Subscriptions Count",expiryInterval:"Expiry Interval(s)",
+                maxInflight:"MaxInflight",inflightLen:"Inflight Len",mqueueLen:"MqueueLen",
+                mqueueDropped:"MqueueDropped",awaitingRelLen:"AwaitingRelLen",deliverMsg:"DeliverMsg",
+                enqueueMsg:"EnqueueMsg",createdAt:"Created At",connectedAt:"Connected At",connected:"Connect Status",
+                basicInfo:"Basic Info",subsInfo:"Subscriptions",protoVer:"ProtoVer",
+                protoName:"Protocol Name",protoType:"Protocol",connectInfo:"Connection",isBridge:"Is Bridge",
+                disconnectAt:"Disconnect At",
+                session:"Session",max:"Maximum",historicHigh:"Historic High of",subscriptions:"Subscriptions Count",
+                inflight:"Inflight Window Size",mqueue:"Message Queue Size",awaiting_rel:"Unconfirmed PUBREC Packets Count",
+                recv_cnt_desc:"Number of TCP Packets Received",recv_msg_desc:"Number of PUBLISH Packets Received",
+                recv_oct_desc:"Number of Bytes Received",recv_pkt_desc:"Number of MQTT Packets Received",send_cnt_desc:"Number of TCP Packets Sent",send_msg_desc:"Number of PUBLISH Packets Sent",
+                send_oct_desc:"Number of Bytes Sent",send_pkt_desc:"Number of MQTT Packets Sent",
+                currentSubs:"Subscriptions Count",addSubs:"Add Subscription",view:"View",disconnected:"Disconnected",
+                kickOut:"Kick Out"
+            },
+            topics:{topic:"Topic",node:"Node"},
+            subscriptions:{clientId:"Client ID",topic:"Topic",qoS:"QoS",share:"Share"},
+            plugins:{
+                name:"Name",version:"Version",description:"Description",status:"Status",stopped:"Stopped",running:"Running",oper:"Operation",start:"Start",stop:"Stop",config:"Config",manage:"Manage",tutorial:"Tutorial",back:"Back",advancedConfig:"Advanced Config",add:"Add",configSuccess:"Config success",configFailure:"Config failure",notice:"Are you sure you want to submit changes and apply them ?",giveUpNotice:"Are you sure you want to give up the change and exit?",noticeTitle:"Notice",
+                cacheNotice:"You have given up this change",emptyConfigOption:"No Default Configuration",
+                searchByName:"Search by plugin name",
+                usernameRequired:"username is required",
+                passwordRequired:"password is required",clientidRequired:"Client ID is required",algorithm:"Algorithm",secret:"Secret or Private key",payloadDesc:"It is valid when verify_claims is enabled. You can use% u and% c placeholders to replace the entered user name and clientid respectively. For details, see",
+                jwtDoc:"JWT Authentication",
+                dataDesc:"One line is a set of data, separated by comma username,clientid",
+                secretRequired:"Secret is required",payloadRequired:"Payload template is required",
+                dataRequired:"Payload data is required",
+                leaveTokenPage:"After leaving the page, the currently entered configuration and generated TOKEN information are no longer retained. Continue?"
+            },
+            modules:{name:"Name",enable:"Enable",disable:"Disable",enabled:"Enabled",disabled:"Disabled"},
+            instances:{
+                instances:"Instances",back:"Back",info:"Basic Info",name:"instance name",descr:"description",service:"service",configInfo:"Config Options",initConfig:"Init config or ",remarkConfig:"description is required",createInstance:"Create Instance",selectServiceType:"Instance Type",all:"All",running:"Running",stopped:"Stopped",auth:"Auth",backend:"Backend",hook:"hook",bridge:"Bridge",other:"Other",select:"Select",selected:"Selected",nextStep:"Next",authDesc:"Provide login authentication and publish subscribe ACL service.",backendDesc:"Provide message persistence to database services.",bridgeDesc:"Bridging a message flow into a message middleware data source.",hookDesc:"A service that uses the trigger callback mechanism to respond to the operation.",
+                otherDesc:"The system runs information and other services."
+            },
+            listeners:{protocol:"Protocol",listenOn:"Listen On",maxConnections:"Max Connections",
+                currentConnections:"Current Connections"
+            },
+            websocket:{
+                connect:"Connect",
+                host:"Host",
+                port:"Port",
+                clientID:"Client ID",
+                username:"Username",
+                password:"Password",
+                keepAlive:"Keep Alive",
+                cleanSession:"Clean Session",
+                disconnect:"Disconnect",
+                currentState:"Current State",
+                subscribe:"Subscribe",
+                topic:"Topic",
+                qoS:"QoS",
+                date:"Date",
+                oper:"Operation",
+                messages:"Messages",
+                retained:"Retained",
+                send:"send",
+                messagesAlreadySent:"Messages already sent",
+                messagesReceived:"Messages received",
+                time:"Time",
+                connectError:"Message send error",
+                connectFailure:"Connect failed on",
+                connectLeave:"The client does not connect to the broker",
+                subscribeSuccess:"Subscribe success",
+                subscribeFailure:"Subscribe failure",
+                unsubscribeFailure:"Unsubscribe Failure",
+                messageSendOut:"Message send out",
+                connected:"CONNECTED",
+                connecting:"CONNECTING",
+                disconnected:"DISCONNECTED",
+                notSupport:"Your browser doesn't support WebSocket"
+            },
+            httpApi:{
+                introduction:"Introduction",
+                desc:"Apart from this help page, all URIs will serve only resources of type application/json, and will require HTTP basic authentication. The default user is admin / public.\n<br/>The emqx_dashboard plugin provides a web management console. The Dashboard helps monitor broker's running status, statistics and metrics of MQTT packets.",
+                reference:"Reference",
+                method:"Method",path:"Path",description:"Description",back:"Back",linkAddress:"Request address",data:"Response data"
+            },
+            app:{
+                appId:"AppID",secret:"AppSecret",newApp:"New App",viewApp:"View App",
+                editApp:"Edit App",create:"Create",errors:"Option Required",name:"AppName",desc:"Remark",expired:"Expired date",
+                status:"Status",enable:"Allowed",disable:"Denied",enableText:"Access allowed",disableText:"Access barred",
+                expiredText:"Never expired",guide:"Application for authentication of EMQ X Management API (REST API)",docs:"Documentation"
+            },
+            users:{
+                newUser:"New User",editUser:"Edit User",username:"Username",remark:"Remark",
+                password:"Password",confirmPassword:"Confirm Password",oldPassword:"Old Password",newPassword:"New Password",
+                confirmNewPassword:"Confirm New Password",changePassword:"Change Password",dontChangePassword:"Don't Change Password",
+                confirm:"Confirm",confirmDelete:"Confirm Delete ?",usernameRequired:"Username required",remarkRequired:"Remark required",
+                usernameIllegal:"Username length: 3~32",passwordRequired:"Password required",newPasswordRequired:"new password required",
+                passwordInconsistent:"Password is inconsistent",authenticate:"You have changed your password. Please re authenticate",
+                createUser:"Create user success",passwordIllegal:"Password length: 3~255"
+            },
+            alert:{required:"required",success:" success",failure:" failure",connect:"Connect"},
+            login:{
+                title:"LOG IN",
+                username:"Username",
+                password:"Password",
+                remember:"Remember",
+                loginButton:"Log In",
+                error:"Username Or Password Error",usernameRequired:"Username Required",passwordRequired:"Password Required"
+            },
+            settings:{
+                language:"Language",
+                apply:"Apply",
+                success:"Apply success"
+            },
+            config:{
+                importConfig:"Import",
+                selectConfigFile:"Select a config file",
+                configFileMustBeJson:"Config file must be JSON",
+                createBy:"Create by",
+                create:"",
+                createUser:"owner",
+                nodeName:"node name",
+                host:"host",
+                descr:"description",
+                createAt:"create At",
+                more:"more",
+                reSelect:"Select another",
+                not_a_valid_config_file:"Not a valid config file",
+                payload_error:"Config option is empty",
+                import_file_error:"Import failure",
+                exportConfig:"Export",
+                ex:"Export",
+                atLeastThree:"At least three words",
+                importSuccess:"Import success",
+                notice:"Use backup configuration files to configure initialization modification. <br/> Notice: configuration files may contain important data, such as database address and authentication information. Please keep good configuration files and use backup function reasonably."
+            },
+            help:{
+                quickStart:"Quick start",
+                emqxDesc:"EMQ X is a MQTT broker developed on the Erlang/OTP platform, which is the most popular MQTT message middleware in the open source community. It supports common IoT protocols, including MQTT, LwM2M, MQTT-SN, CoAP, LoRaWAN, HTTP, and WebSocket. Welcome to follow our project or participate in development.",
+                useDocs:"Documentation",
+                docsDesc:"We have prepared a comprehensive documentation to help you familiarize yourself with more powerful features.",
+                forwardView:"View documentation"    
+            },
+            analysis:{
+                topicMetrics:"Topic metrics",metricsTip:"(The metrics are real-time refresh data, including all statistics since the addition)",messageIn:"Message In",messageOut:"Message Out",messageDrop:"Message Drop",addTopic:"Add Topic",details:"Details",all:"All",rateItem:"{0} / second",rate:"(rate)",
+                messageInDesc:"(message in rate)",
+                messageOutDesc:"(message out rate)",
+                messageDropDesc:"(message drop rate)",
+                loadAnalysis:"Load",
+                loadSuccess:"Load Success"
+            },
+            httpCode:{
+                0:"Success",101:"Bad RPC",102:"Unknown Error",103:"Username or password error",104:"Empty username or password",105:"User does not exist",106:"Admin can not be deleted",107:"Missing request parameter",108:"Request parameter type error",109:"Request parameter is not a json",
+                110:"Plugin has been loaded",111:"Plugin has been unloaded",112:"Client not online",
+                113:"User already exist",114:"Old password error",115:"Bad topic"
+            },
+            util:{day:"day | days",year:"year | years"}
+        }),
+        c=n("Vi3T"),l=n.n(c),u=a()({},l.a,{
     select:{cluster:"全部节点",placeholder:"请选择"},
     error:{
         networkError:"网络错误",
@@ -286,21 +416,168 @@ NHnr:function(e,t,n){
             },
             staticRenderFns:[]
         };
-        var m=n("VU/8")({name:"App"},p,!1,function(e){n("rBGa")},null,null).exports,h=n("cHtD"),b=n("olkN"),f=(n("7TWk"),n("HL/F")),g=n("mvHQ"),_=n.n(g),v={name:"json-input",components:{},inheritAttrs:!1,props:{value:[Array,Object,String]},model:{prop:"value",event:"input"},data:function(){return{objectPlaceholder:"JSON, e.g: \n"+_()({Authorization:"Basic YWRtaW46cHVibGlj"},null,2),sourceValue:""}},methods:{},created:function(){try{this.sourceValue=JSON.parse(this.value,null,2)}catch(e){this.sourceValue=""}},watch:{value:function(e){console.log(e)},sourceValue:function(e){var t=e;if(e){try{t=JSON.parse(e)}catch(n){t=e}this.$emit("input",t)}else this.$emit("input",void 0)}},computed:{}},S={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("el-input",{staticClass:"json-input",attrs:{type:"textarea",placeholder:e.$attrs.placeholder||e.objectPlaceholder,rows:5},model:{value:e.sourceValue,callback:function(t){e.sourceValue=t},expression:"sourceValue"}})},staticRenderFns:[]};var w=n("VU/8")(v,S,!1,function(e){n("1KhH")},null,null).exports,y=n("Dd8w"),T=n.n(y),k=n("d7EF"),C=n.n(k),A=n("W3Iv"),E=n.n(A),D={name:"data-table",components:{},props:{value:{required:!0},isRaw:{type:Boolean,default:!0},disabled:{type:Boolean,default:!1},option:{type:Object,default:function(){return{}}},allowedArray:{type:Boolean,default:!1}},model:{prop:"value",event:"input"},watch:{},data:function(){return{tableData:[{__new:!0,key:"",value:""}]}},methods:{initValue:function(e){var t=this;e?(this.tableData=[],E()(e).forEach(function(e){var n=C()(e,2),s=n[0],a=n[1];s&&(a&&Array.isArray(a)?a.forEach(function(e){t.tableData.push({key:s,value:e})}):t.tableData.push({key:s,value:a}))}),this.disabled||this.tableData.push({key:"",value:"",__new:!0})):this.tableData=[{key:"",value:"",__new:!0}]},handleInput:function(e){e.__new&&(this.$delete(e,"__new"),(e.key||e.value)&&this.tableData.push({key:"",value:"",__new:!0})),this.setObject()},setObject:function(){var e=this,t={},n={};this.tableData.forEach(function(s){e.$set(s,"__has_error",!1);var a=s.key,o=s.value,i=void 0===o?"":o,r=s.__new;if(a&&!r)if(!n[a]||e.allowedArray)n[a]?Array.isArray(t[a])?t[a].push(i):t[a]=[t[a],i]:t[a]=i,t[a]&&!e.allowedArray&&Array.isArray(t.key)&&(t[a]=t[a][0]),n[a]=!0;else{e.$set(s,"__has_error",!0);var c=e.tableData.find(function(e){return a===e.key});c&&e.$set(c,"__has_error",!0)}}),this.$emit("input",t)},handleOper:function(e,t,n){["edit"].includes(e)?this.$set(this.tableData[t],"__"+e,n):"remove"===e&&(this.tableData=this.tableData.filter(function(e,n){return n!==t})),this.setObject()}},created:function(){this.initValue(this.value)},computed:{_option:function(){return T()({keyLabel:this.$t("rule.data_key"),valueLabel:this.$t("rule.data_value")},this.option)}}},M={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("el-table",{staticClass:"data-table",class:{disable:e.disabled,"el-table--public":e.isRaw},staticStyle:{"margin-top":"0"},attrs:{border:"",data:e.tableData}},[n("el-table-column",{attrs:{prop:"key",label:e._option.keyLabel},scopedSlots:e._u([{key:"default",fn:function(t){var s=t.row;return[n("span",{staticClass:"data-value"},[e._v(e._s(s.key))]),e._v(" "),n("el-input",{staticClass:"data-input",class:{"is-error":s.__has_error&&!s.__new},attrs:{size:"mini",placeholder:s.__new?"Key":""},on:{input:function(t){return e.handleInput(s)}},model:{value:s.key,callback:function(t){e.$set(s,"key",t)},expression:"row.key"}},[s.__has_error?n("template",{slot:"append"},[e._v("\n          "+e._s(e.$t("rule.exists"))+"\n        ")]):e._e()],2)]}}])}),e._v(" "),n("el-table-column",{attrs:{prop:"value","class-name":"value-column",label:e._option.valueLabel},scopedSlots:e._u([{key:"default",fn:function(t){var s=t.row,a=t.$index;return[n("span",{staticClass:"data-value"},[e._v(e._s(s.value))]),e._v(" "),n("el-input",{staticClass:"data-input",attrs:{size:"mini",placeholder:s.__new?"Value":""},on:{input:function(t){return e.handleInput(s,!1)}},model:{value:s.value,callback:function(t){e.$set(s,"value",t)},expression:"row.value"}}),e._v(" "),e.disabled?e._e():n("i",{class:{"el-icon-close":!s.__new,"oper-icon":!0},on:{click:function(t){return e.handleOper("remove",a,!0)}}},[e._v("\n        "+e._s(s.__new?" ":"")+"\n      ")])]}}])})],1)},staticRenderFns:[]};var x=n("VU/8")(D,M,!1,function(e){n("JB6b")},null,null).exports,I=n("w7XY"),N=n("VOAv"),R=n("CqLJ"),P=n.n(R),q={dateFormat:function(e){return e?10===e.toString().length?P()(1e3*e,"yyyy-mm-dd HH:MM:ss"):P()(e,"yyyy-mm-dd HH:MM:ss"):""}};o.default.config.productionTip=!1,o.default.use(r.a),o.default.use(l.a),o.default.prototype.$ELEMENT={size:"medium"},o.default.use(function(e){e.prototype.$httpGet=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return t._=Date.now(),I.a.get(e,{params:t})},e.component(w.name,w),e.component(x.name,x),e.prototype.$httpPost=I.a.post,e.prototype.$httpPut=I.a.put,e.prototype.$httpDelete=I.a.delete,e.prototype.$axios=I.a,e.prototype.$env=window.EMQX_DASHBOARD_CONFIG||{}}),a()(q).forEach(function(e){o.default.filter(e,q[e])});var O=new r.a({locale:window.localStorage.language||window.EMQX_DASHBOARD_CONFIG.lang||"en",messages:f.a});d.a.i18n(function(e,t){return O.t(e,t)}),o.default.prototype.$t=function(e,t){return O.t(e,t)},Object(N.a)(),Object(i.sync)(b.a,h.a),
-new o.default({el:"#app",
-    router:h.a,
-    store:b.a,
-    i18n:O,
-    components:{App:m},
-    template:"<App/>"})},
-UVIz:function(e,t){},
-VOAv:function(e,t,n){
-    "use strict";
-    function s(e){}
-    function a(){}
-    n.d(t,"a",function(){return a}),
-    n.d(t,"b",function(){return s})
-},
+        var m=n("VU/8")({name:"App"},p,!1,function(e){n("rBGa")},null,null).exports,
+            h=n("cHtD"),
+            b=n("olkN"),
+            f=(n("7TWk"),n("HL/F")),
+            g=n("mvHQ"),
+            _=n.n(g),
+            v={
+                name:"json-input",
+                components:{},
+                inheritAttrs:!1,
+                props:{value:[Array,Object,String]},
+                model:{prop:"value",event:"input"},
+                data:function(){return{objectPlaceholder:"JSON, e.g: \n"+_()({Authorization:"Basic YWRtaW46cHVibGlj"},null,2),sourceValue:""}},
+                methods:{},
+                created:function(){try{this.sourceValue=JSON.parse(this.value,null,2)}catch(e){this.sourceValue=""}},
+                watch:{
+                    value:function(e){console.log(e)},
+                    sourceValue:function(e){
+                        var t=e;
+                        if(e){
+                            try{t=JSON.parse(e)}catch(n){t=e}this.$emit("input",t)
+                        }else this.$emit("input",void 0)}
+                },
+                computed:{}
+            },
+            S={
+                render:function(){
+                    var e=this,
+                        t=e.$createElement;
+                    return(e._self._c||t)("el-input",
+                        {staticClass:"json-input",
+                        attrs:{type:"textarea",placeholder:e.$attrs.placeholder||e.objectPlaceholder,rows:5},
+                        model:{value:e.sourceValue,callback:function(t){e.sourceValue=t},expression:"sourceValue"}}
+                        )
+                },
+                staticRenderFns:[]
+            };
+            var w=n("VU/8")(v,S,!1,function(e){n("1KhH")},null,null).exports,
+                y=n("Dd8w"),
+                T=n.n(y),
+                k=n("d7EF"),
+                C=n.n(k),
+                A=n("W3Iv"),
+                E=n.n(A),
+                D={
+                    name:"data-table",
+                    components:{},
+                    props:{
+                        value:{required:!0},
+                        isRaw:{type:Boolean,default:!0},
+                        disabled:{type:Boolean,default:!1},
+                        option:{type:Object,default:function(){return{}}},
+                        allowedArray:{type:Boolean,default:!1}
+                    },
+                    model:{prop:"value",event:"input"},
+                    watch:{},
+                    data:function(){return{tableData:[{__new:!0,key:"",value:""}]}},
+                    methods:{
+                        initValue:function(e){
+                            var t=this;
+                            e?(this.tableData=[],
+                                E()(e).forEach(function(e){
+                                    var n=C()(e,2),
+                                        s=n[0],
+                                        a=n[1];
+                                    s&&(a&&Array.isArray(a) ? 
+                                    a.forEach(function(e){
+                                        t.tableData.push({key:s,value:e})}) :
+                                    t.tableData.push({key:s,value:a}))
+                                }),
+                                this.disabled||this.tableData.push({key:"",value:"",__new:!0})):
+                                this.tableData=[{key:"",value:"",__new:!0}]
+                        },
+                        handleInput:function(e){
+                            e.__new&&(this.$delete(e,"__new"),
+                            (e.key||e.value)&&this.tableData.push({key:"",value:"",__new:!0})),
+                            this.setObject()
+                        },
+                        setObject:function(){
+                            var e=this,
+                                t={},
+                                n={};
+                            this.tableData.forEach(function(s){
+                                e.$set(s,"__has_error",!1);
+                                var a=s.key,
+                                    o=s.value,
+                                    i=void 0===o?"":o,
+                                    r=s.__new;
+                                if(a&&!r)
+                                    if(!n[a]||e.allowedArray)
+                                        n[a] ?
+                                        Array.isArray(t[a]) ? 
+                                        t[a].push(i) :
+                                        t[a]=[t[a],i] :
+                                        t[a]=i,t[a]&&!e.allowedArray&&Array.isArray(t.key)&&(t[a]=t[a][0]),
+                                n[a]=!0;else{e.$set(s,"__has_error",!0);
+                                var c=e.tableData.find(function(e){return a===e.key});c&&e.$set(c,"__has_error",!0)}
+                            }),
+                            this.$emit("input",t)
+                        },
+                        handleOper:function(e,t,n){
+                            ["edit"].includes(e)?this.$set(this.tableData[t],"__"+e,n):
+                            "remove"===e&&(this.tableData=this.tableData.filter(function(e,n){return n!==t})),this.setObject()
+                        }
+                    },
+                    created:function(){this.initValue(this.value)},
+                    computed:{
+                        _option:function(){return T()({keyLabel:this.$t("rule.data_key"),valueLabel:this.$t("rule.data_value")},this.option)}
+                    }
+                },
+                M={ render:function(){
+                    var e=this,t=e.$createElement,n=e._self._c||t;
+                    return n("el-table",{staticClass:"data-table",class:{disable:e.disabled,"el-table--public":e.isRaw},staticStyle:{"margin-top":"0"},attrs:{border:"",data:e.tableData}},[
+                        n("el-table-column",{attrs:{prop:"key",label:e._option.keyLabel},scopedSlots:e._u([{key:"default",fn:function(t){var s=t.row;return[n("span",{staticClass:"data-value"},[e._v(e._s(s.key))]),
+                        e._v(" "),
+                        n("el-input",{staticClass:"data-input",class:{"is-error":s.__has_error&&!s.__new},attrs:{size:"mini",placeholder:s.__new?"Key":""},on:{input:function(t){return e.handleInput(s)}},model:{value:s.key,callback:function(t){e.$set(s,"key",t)},expression:"row.key"}},[s.__has_error?n("template",{slot:"append"},[e._v("\n          "+e._s(e.$t("rule.exists"))+"\n        ")]):e._e()],2)]}}])}),
+                        e._v(" "),
+                        n("el-table-column",{attrs:{prop:"value","class-name":"value-column",label:e._option.valueLabel},scopedSlots:e._u([{key:"default",fn:function(t){var s=t.row,a=t.$index;return[n("span",{staticClass:"data-value"},[e._v(e._s(s.value))]),e._v(" "),n("el-input",{staticClass:"data-input",attrs:{size:"mini",placeholder:s.__new?"Value":""},on:{input:function(t){return e.handleInput(s,!1)}},model:{value:s.value,callback:function(t){e.$set(s,"value",t)},expression:"row.value"}}),e._v(" "),e.disabled?e._e():n("i",{class:{"el-icon-close":!s.__new,"oper-icon":!0},on:{click:function(t){return e.handleOper("remove",a,!0)}}},[
+                            e._v("\n        "+e._s(s.__new?" ":"")+"\n      ")])]}}])})],1)},
+                    staticRenderFns:[]
+                };
+                var x=n("VU/8")(D,M,!1,function(e){n("JB6b")},null,null).exports,
+                    I=n("w7XY"),
+                    N=n("VOAv"),
+                    R=n("CqLJ"),
+                    P=n.n(R),
+                    q={dateFormat:function(e){return e?10===e.toString().length?P()(1e3*e,"yyyy-mm-dd HH:MM:ss"):P()(e,"yyyy-mm-dd HH:MM:ss"):""}};
+                    o.default.config.productionTip=!1,
+                    o.default.use(r.a),
+                    o.default.use(l.a),
+                    o.default.prototype.$ELEMENT={size:"medium"},
+                    o.default.use(function(e){
+                        e.prototype.$httpGet=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return t._=Date.now(),I.a.get(e,{params:t})},
+                        e.component(w.name,w),
+                        e.component(x.name,x),
+                        e.prototype.$httpPost=I.a.post,
+                        e.prototype.$httpPut=I.a.put,
+                        e.prototype.$httpDelete=I.a.delete,
+                        e.prototype.$axios=I.a,
+                        e.prototype.$env=window.EMQX_DASHBOARD_CONFIG||{}
+                    }),
+                    a()(q).forEach(function(e){o.default.filter(e,q[e])});
+                    var O=new r.a({locale:window.localStorage.language||window.EMQX_DASHBOARD_CONFIG.lang||"en",messages:f.a});
+                    d.a.i18n(function(e,t){return O.t(e,t)}),
+                    o.default.prototype.$t=function(e,t){return O.t(e,t)},
+                    Object(N.a)(),
+                    Object(i.sync)(b.a,h.a),
+                    new o.default({el:"#app",
+                        router:h.a,
+                        store:b.a,
+                        i18n:O,
+                        components:{App:m},
+                        template:"<App/>"})
+                },
+                UVIz:function(e,t){},
+                VOAv:function(e,t,n){
+                    "use strict";
+                    function s(e){}
+                    function a(){}
+                    n.d(t,"a",function(){return a}),
+                    n.d(t,"b",function(){return s})
+                },
 cHtD:function(e,t,n){
     "use strict";
     var s=n("7+uW"),
@@ -313,10 +590,12 @@ cHtD:function(e,t,n){
         meta:{requiresAuth:!1}},
         {path:"/",
             component:function(){
+                console.log("BIND DEFAULT SHIT", n);
+
                 return n.e(7).then(n.bind(null,"lO7g"))
             },
             children:[
-                {path:"",name:"overview",component:function(){return n.e(16).then(n.bind(null,"RjBg"))}},
+                {path:"",name:"overview",component:function(){ return n.e(16).then(n.bind(null,"RjBg")) }},
                 {path:"/clients",name:"clients",component:function(){return n.e(1).then(n.bind(null,"zXyA"))}},
                 {path:"/clients/:id",name:"clientDetails",component:function(){return Promise.all([n.e(0),n.e(8)]).then(n.bind(null,"8AHC"))}},
                 {path:"/topics",name:"topics",component:function(){return n.e(1).then(n.bind(null,"zXyA"))}},
@@ -345,21 +624,59 @@ cHtD:function(e,t,n){
             component:function(){return n.e(17).then(n.bind(null,"wkqA"))}
         }
     ],
-c=new a.a({routes:r});
-c.beforeEach(function(e,t,n){
-    var s=e.meta.requiresAuth;
-    void 0===s||s?o.a.state.user.password?(i.a.indexOf(e.name)>-1&&o.a.dispatch("CANCEL_FEAT_ON_LEFTBAR",e.name),document.body.scrollTop=0,document.documentElement.scrollTop=0,n()):n({path:"/login",query:{redirect:e.fullPath}}):n()}),t.a=c},hQrB:function(e,t,n){"use strict";t.a=["rules"]},olkN:function(e,t,n){"use strict";var s,a,o=n("bOdI"),i=n.n(o),r=n("mvHQ"),c=n.n(r),l=n("7+uW"),u=n("NYxO"),d=n("7YgM"),p=n.n(d),m=n("hQrB");function h(e){try{return JSON.parse(e)}catch(e){return null}}l.default.use(u.a);var b={loading:!1,user:h(sessionStorage.getItem("user"))||h(localStorage.getItem("user"))||{},nodeName:"",
-        showFeatOnLeftbar:function(){var e=h(localStorage.getItem("showFeatOnLeftbar"));function t(){var e={};m.a.forEach(function(t){e[t]=!0});var t={version:p.a.version,data:e};return localStorage.setItem("showFeatOnLeftbar",c()(t)),t}return e?e.version!==p.a.version?(localStorage.removeItem("showFeatOnLeftbar"),t()):e:t()}()},
-        f=(s={},i()(s,"USER_LOGIN",function(e,t){
-            var n=e.commit;
-            if(t.isLogOut)return sessionStorage.removeItem("user"),
-            localStorage.removeItem("user"),
-            void n("USER_LOGIN",t);
-            t.remember ?
+    c=new a.a({routes:r});
+    c.beforeEach(function(e,t,n){
+        var s=e.meta.requiresAuth;
+        void 0===s||s?o.a.state.user.password?(i.a.indexOf(e.name)>-1&&o.a.dispatch("CANCEL_FEAT_ON_LEFTBAR",e.name),document.body.scrollTop=0,document.documentElement.scrollTop=0,n()):n({path:"/login",query:{redirect:e.fullPath}}):n()}),t.a=c},hQrB:function(e,t,n){"use strict";t.a=["rules"]},olkN:function(e,t,n){"use strict";var s,a,o=n("bOdI"),i=n.n(o),r=n("mvHQ"),c=n.n(r),l=n("7+uW"),u=n("NYxO"),d=n("7YgM"),p=n.n(d),m=n("hQrB");function h(e){try{return JSON.parse(e)}catch(e){return null}}l.default.use(u.a);var b={loading:!1,user:h(sessionStorage.getItem("user"))||h(localStorage.getItem("user"))||{},nodeName:"",
+        showFeatOnLeftbar:function(){
+            var e=h(localStorage.getItem("showFeatOnLeftbar"));
+            function t(){
+                var e={};
+                m.a.forEach(function(t){e[t]=!0});
+                var t={version:p.a.version,data:e};
+                return localStorage.setItem("showFeatOnLeftbar",c()(t)),t
+            }
+            return e ? e.version!==p.a.version ? (localStorage.removeItem("showFeatOnLeftbar"),t()) : e:t()
+        }()},
+            f=(s={},
+                i()(s,"USER_LOGIN",function(e,t){
+                var n=e.commit;
+                if(t.isLogOut)return sessionStorage.removeItem("user"),
+                localStorage.removeItem("user"),
+                void n("USER_LOGIN",t);
+                t.remember ?
                 localStorage.setItem("user",c()(t.user)) :
                 sessionStorage.setItem("user",c()(t.user)),
                 n("USER_LOGIN",t)
-            }),i()(s,"CURRENT_NODE",function(e,t){(0,e.commit)("CURRENT_NODE",t)}),i()(s,"LOADING",function(e){(0,e.commit)("LOADING",arguments.length>1&&void 0!==arguments[1]&&arguments[1])}),i()(s,"CANCEL_FEAT_ON_LEFTBAR",function(e,t){(0,e.commit)("CANCEL_FEAT_ON_LEFTBAR",t)}),s),g=(a={},i()(a,"USER_LOGIN",function(e,t){t.isLogOut?l.default.set(e,"user",{}):l.default.set(e,"user",t.user)}),i()(a,"CURRENT_NODE",function(e,t){l.default.set(e,"nodeName",t)}),i()(a,"LOADING",function(e,t){e.loading=t}),i()(a,"CANCEL_FEAT_ON_LEFTBAR",function(e,t){var n=e.showFeatOnLeftbar;n.data[t]=!1,l.default.set(e,"showFeatOnLeftbar",n),localStorage.setItem("showFeatOnLeftbar",c()(n))}),a);t.a=new u.a.Store({strict:!1,state:b,actions:f,mutations:g})},rBGa:function(e,t){},w7XY:function(e,t,n){"use strict";var s=n("pFYg"),a=n.n(s),o=n("//Fk"),i=n.n(o),r=n("woOf"),c=n.n(r),l=n("mtWM"),u=n.n(l),d=n("Y81h"),p=n.n(d),m=n("UVIz"),h=(n.n(m),n("zL8q")),b=(n.n(h),n("cHtD")),f=n("olkN"),g=n("HL/F"),_=["zh","en"].includes(localStorage.language)?localStorage.language:window.EMQX_DASHBOARD_CONFIG.lang||"en",v=(g.a[_]||g.a.en).httpCode;p.a.configure({showSpinner:!1}),c()(u.a.defaults,{headers:{"Content-Type":"application/json","Cache-Control":"no-cache"},baseURL:"/api/v4",timeout:1e4});var S=0;function w(e){console.error(e),p.a.done(),clearTimeout(S),f.a.dispatch("LOADING",!1);var t=e.response&&e.response.status;return e.response&&e.response.data.message&&(e.message=e.response.data.message),
+                }),
+                i()(s,"CURRENT_NODE",function(e,t){
+                    (0,e.commit)("CURRENT_NODE",t)
+                }),
+                i()(s,"LOADING",function(e){
+                    (0,e.commit)("LOADING",arguments.length>1&&void 0!==arguments[1]&&arguments[1])}),
+                i()(s,"CANCEL_FEAT_ON_LEFTBAR",function(e,t){(0,e.commit)("CANCEL_FEAT_ON_LEFTBAR",t)}),s),
+                g=( a={},
+                    i()(a,"USER_LOGIN",function(e,t){t.isLogOut?l.default.set(e,"user",{}):l.default.set(e,"user",t.user)}),
+                    i()(a,"CURRENT_NODE",function(e,t){l.default.set(e,"nodeName",t)}),
+                    i()(a,"LOADING",function(e,t){e.loading=t}),
+                    i()(a,"CANCEL_FEAT_ON_LEFTBAR", function(e,t){
+                        var n=e.showFeatOnLeftbar;n.data[t]=!1,
+                        l.default.set(e,"showFeatOnLeftbar",n),
+                        localStorage.setItem("showFeatOnLeftbar",c()(n))
+                    }),a);
+                    t.a=new u.a.Store({strict:!1,state:b,actions:f,mutations:g})},
+                    rBGa:function(e,t){},
+                    w7XY:function(e,t,n){"use strict";var s=n("pFYg"),a=n.n(s),o=n("//Fk"),i=n.n(o),r=n("woOf"),c=n.n(r),l=n("mtWM"),u=n.n(l),d=n("Y81h"),p=n.n(d),m=n("UVIz"),h=(n.n(m),n("zL8q")),
+            b=(n.n(h), n("cHtD")),
+            f=n("olkN"),
+            g=n("HL/F"),
+            _=["zh","en"].includes(localStorage.language) ? localStorage.language:window.EMQX_DASHBOARD_CONFIG.lang||"en",
+            v=(g.a[_]||g.a.en).httpCode;
+            p.a.configure({showSpinner:!1}),c()(u.a.defaults,{headers:{"Content-Type":"application/json","Cache-Control":"no-cache"},baseURL:"/api/v4",timeout:1e4});var S=0;function w(e){console.error(e),p.a.done(),clearTimeout(S),f.a.dispatch("LOADING",!1);var t=e.response&&e.response.status;return e.response&&e.response.data.message&&(e.message=e.response.data.message),
             401===t ?
-                (f.a.dispatch("USER_LOGIN",{isLogOut:!0}),b.a.push({path:"/login",query:{to:b.a.fullPath}})) :
-                404===t ? e.message="URL Not Found":function(e){"module_not_loaded"!==e.message&&h.Message.error(e.message)}(e),i.a.reject(e.message)}u.a.interceptors.request.use(function(e){return f.a.state.user.username?e.auth={username:f.a.state.user.username,password:f.a.state.user.password}:b.a.push({path:"/login",query:{to:b.a.fullPath}}),p.a.start(),S=setTimeout(function(){f.a.dispatch("LOADING",!0)},100),e},function(e){console.warn("Request Error: ",e),f.a.dispatch("LOADING",!1)}),u.a.interceptors.response.use(function(e){var t={},n="";if("object"===a()(e.data)){var s=e.status,o=e.data,i=o.code,r=o.meta,c=o.message,l=e.data.data;0!==i&&(n=v[i]||c),r&&(l={items:l,meta:r}),t={data:l,status:s}}if(p.a.done(),clearTimeout(S),S=0,f.a.dispatch("LOADING",!1),n){var u=new Error(n);throw w(u),u}return t},w),t.a=u.a}},[0]);
+                (f.a.dispatch("USER_LOGIN",{isLogOut:!0}),
+                b.a.push({path:"/login",query:{to:b.a.fullPath}})) :
+                404===t ?
+                    e.message="URL Not Found":
+                    function(e){"module_not_loaded"!==e.message&&h.Message.error(e.message)}(e),i.a.reject(e.message)
+                }u.a.interceptors.request.use(function(e){return f.a.state.user.username?e.auth={username:f.a.state.user.username,password:f.a.state.user.password}:b.a.push({path:"/login",query:{to:b.a.fullPath}}),p.a.start(),S=setTimeout(function(){f.a.dispatch("LOADING",!0)},100),e},function(e){console.warn("Request Error: ",e),f.a.dispatch("LOADING",!1)}),u.a.interceptors.response.use(function(e){var t={},n="";if("object"===a()(e.data)){var s=e.status,o=e.data,i=o.code,r=o.meta,c=o.message,l=e.data.data;0!==i&&(n=v[i]||c),r&&(l={items:l,meta:r}),t={data:l,status:s}}if(p.a.done(),clearTimeout(S),S=0,f.a.dispatch("LOADING",!1),n){var u=new Error(n);throw w(u),u}return t},w),t.a=u.a}},[0]);
