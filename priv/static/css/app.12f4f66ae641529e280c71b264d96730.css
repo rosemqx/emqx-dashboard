@@ -70,19 +70,7 @@ a{ text-decoration:none;}
     color:#fff;
     background-color:#393a3e;
 }
-
-.home-view {
-    display: flex;
-    flex-direction:row;
-    flex-wrap:no-wrap;
-    justify-content:flex-start;
-    align-items: flex-start;
-}
-.overview-view, .data-view, .rules-view, .resources-view, .topic-metrics, .plugins-view, .modules-view,
-.websocket-view, .http-api, .settings-view, .applications-view, .users-view, .listeners-view,
-.help-view {
-    flex: 1 1 auto;
-}
+.view { flex:1 1 auto;}
 .overview-view .el-select .el-input__inner{padding-left:10px}
 .overview-view .card-box{position:relative;margin-top:74px}
 .overview-view .card-box .card-title{position:absolute;height:24px;line-height:24px;width:100%;top:-34px;left:0;font-size:16px}.overview-view .card-box .el-table{margin-top:0}

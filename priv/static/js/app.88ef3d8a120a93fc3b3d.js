@@ -594,11 +594,7 @@ cHtD:function(e,t,n){
         {path:"/login",name:"login",component:function(){return n.e(18).then(n.bind(null,"lmfZ"))},
         meta:{requiresAuth:!1}},
         {path:"/",
-            component:function(){
-                console.log("BIND DEFAULT SHIT", n);
-
-                return n.e(7).then(n.bind(null,"lO7g"))
-            },
+            component:function(){ return n.e(16).then(n.bind(null,"lO7g")) },
             children:[
                 {path:"",name:"overview",component:function(){ return n.e(16).then(n.bind(null,"RjBg")) }},
                 {path:"/clients",name:"clients",component:function(){return n.e(1).then(n.bind(null,"zXyA"))}},
