@@ -13,7 +13,7 @@ event(init) ->
 event(E) ->
     case lists:keyfind(E, 1, path()) of
         {Pb,Path} ->
-            nitro:wire(#jq{target={qs, <<".left-bar .active">>}, property=<<"classList">>, method=["toggle"], args=["'active'"]}),
+            nitro:wire(#jq{target={qs, ".left-bar .active"}, property="classList", method=["toggle"], args=["'active'"]}),
             nitro:wire(#jq{target=Pb, property="classList", method=["toggle"], args=["'active'"]}),
             nitro:wire(nitro:f("qi('app').__vue__.$router.push({path: '~s'});", [Path]));
         false ->
