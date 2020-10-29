@@ -381,7 +381,8 @@ EzHP:function(t,e,n) {
         var t=this,
         e=t.$createElement,n=t._self._c||e;
         return n("div",{staticClass:"websocket-view"},[
-            n("div",{staticClass:"page-title"},[ t._v(t._s(t.$t("leftbar.websocket")))]),
+            n("div",{staticClass:"page-title"},[ 
+            t._v(t._s(t.$t("leftbar.websocket")))]),
             t._v(" "),
             n("el-card",{
                 staticClass:"el-card--self",

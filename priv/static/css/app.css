@@ -1,6 +1,7 @@
 *{box-sizing:border-box}
 a{ text-decoration:none;}
 
+.view {flex: 1 1 auto; overflow:hidden;margin:1em;}
 .card {display:flex;flex-direction:row;flex-wrap:wrap;}
 .card h4 {text-transform:capitalize;width:100%;margin: 2em 0 0 2em;}
 .card-row {display:flex;flex-direction:column;margin:1em;flex:1 1 45%;}
@@ -25,6 +26,7 @@ a{ text-decoration:none;}
     align-self: flex-start;
     display:flex;
     flex-direction:column;
+    margin:1em;
 }
 .left-bar .iconfont{margin-right:8px;font-size:18px}
 .left-bar .bar-title{
@@ -54,11 +56,7 @@ a{ text-decoration:none;}
     margin-top:4px;
     transition:border-color .3s,background-color .3s,color .3s,box-shadow .3s
 }
-.left-bar .el-menu-item:hover{color:#fff!important;background-color:#393a3e!important}
-.left-bar .el-menu-item:hover i{color:#fff!important}
-.left-bar .el-menu-item.is-active{color:#fff!important;background-color:#00b173!important;box-shadow:0 0 5px 0 #02d48a}
-.left-bar .el-menu-item.is-active i{color:#fff!important}
-.left-bar .last-item{margin-bottom:72px}
+
 .left-bar .menu-dot .el-badge__content.is-fixed.is-dot{top:17px;right:0}
 .left-bar .submenu-dot .el-badge__content.is-fixed.is-dot{right:3px;top:14px}
 .left-bar a {
@@ -69,6 +67,11 @@ a{ text-decoration:none;}
 .left-bar a:hover {
     color:#fff;
     background-color:#393a3e;
+}
+.left-bar a.active{
+    color: #fff;
+    background-color:#00b173;
+    box-shadow:0 0 5px 0 #02d48a
 }
 
 .overview-view .el-select .el-input__inner{padding-left:10px}

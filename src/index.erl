@@ -5,19 +5,20 @@
 -include_lib("kvs/include/kvs.hrl").
 
 -export([event/1]).
-%-record(i, ?DEFAULT_BASE_TAG(<<"i">>)).
 
 % pi
 event(init) ->
     n2o:reg(n2o:sid()),
     nitro:insert_top(app, nav());
-event(websocket) -> 
-    nitro:wire("qi('app').__vue__.$router.push({path: '/websocket'});");
-event(monitor) ->    
-    io:format("MONITOR");
-event(E) -> 
-    nitro:wire("qi('app').__vue__.$router.push({path: '/'});"),
-    io:format("not handled event ~p.~n", [E]).
+event(E) ->
+    case lists:keyfind(E, 1, path()) of
+        {Pb,Path} ->
+            nitro:wire(#jq{target={qs, <<".left-bar .active">>}, property=<<"classList">>, method=["toggle"], args=["'active'"]}),
+            nitro:wire(#jq{target=Pb, property="classList", method=["toggle"], args=["'active'"]}),
+            nitro:wire(nitro:f("qi('app').__vue__.$router.push({path: '~s'});", [Path]));
+        false ->
+            nitro:wire("qi('app').__vue__.$router.push({path: '/'});")
+    end.
 
 nav() -> #nav{class= <<"left-bar">>, body=[
     #panel{class= <<"bar-title">>, body=[
@@ -27,9 +28,9 @@ nav() -> #nav{class= <<"left-bar">>, body=[
     #link{id=overview, body= <<"Огляд"/utf8>>, postback=overview},
     #link{id=clients, body= <<"Клієнти"/utf8>>, postback=clients},
     #link{id=topics,  body= <<"Теми"/utf8>>,    postback=topics},
-    #link{id=subs,    body= <<"Підписки"/utf8>>,postback=subscriptions},
+    #link{id=subscriptions, body= <<"Підписки"/utf8>>,postback=subscriptions},
     #link{id=rules,   body= <<"Правила"/utf8>>, postback=rules},
-    #link{id=res,     body= <<"Ресурси"/utf8>>, postback=resources},
+    #link{id=resources,body= <<"Ресурси"/utf8>>, postback=resources},
     #link{id=analytics,body= <<"Аналітика"/utf8>>,postback=analytics},
     #link{id=metrics, body= <<"Метрики"/utf8>>, postback=metrics},
     #link{id=plugins, body= <<"Плагіни"/utf8>>, postback=plugins},
@@ -49,6 +50,14 @@ nav() -> #nav{class= <<"left-bar">>, body=[
         #link{body=[#image{src= <<"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABsklEQVRoQ+2ZwVHDMBBF/6oB6IBwCRxNJeCkAdGBXQl0gCggASrB3DC5OBVgrjlkGTOByciJbEcyyIxytbTat/9LlrOEgf9o4PkjAPy1gjsVOH+Qo/UaN0SIAIwcJ1kwIxMC6WusCtvYNYCv5BnPBBzbBjfNZ6AUhAtbiBrAeC4fCbjsM/nv2Aw8vU3Ulc1auwDe+67+VsJFPlGnTgHO5pK3A+YT5fSkch2/lpzrBfTquo4fALr6NyigVSxYKFjI8pj+dQt1VaxpfABoqlDX5+OZvFsJpEWsyjZzvVOgek8wkDHhehGrrAnCS4Aq6eq6zYx0MVXKBOEtwM+Vm6FMlrIG0K8GTZIf8txkqUEAmCw1HADGBwOJvicGAcDACxPkrlPJGuAQT5vm6HuKgfsVIdn3XvAWgPdYRof3EsBkGe8BxnOpTJbxHqDrnvLOQt4DhI/68FHf1aTa+GChYKFgIbd/39cbHDNZEuHIstDtpjOW+VRZ9eD+X4tp06HM+lahui4Lgch5k6/SftOpvCVGBMJJOz+0HMVYMiEThMQ2+WpFp/2vlghOhwUAp+U8INjgFfgEg1piQESWU5UAAAAASUVORK5CYII=">> }]}
     ]}
 ]}.
+
+path() -> [
+    {overview,"/"}, {clients,"/clients"}, {topics,"/topics"},
+    {subscriptions,"/subscriptions"}, {rules,"/rules"}, {resources,"/resources"},
+    {analytics,"/analytics"}, {metrics,"/topic_metrics"},
+    {plugins,"/plugins"}, {modules,"/modules"}, {listeners,"/listeners"},
+    {websocket,"/websocket"}, {http,"/http_api"}, {applications,"/applications"},
+    {settings,"/settings"}, {users,"/users"},  {help,"/help"}].
 
 ws() -> #panel{class=card, body=[
     % on enter
