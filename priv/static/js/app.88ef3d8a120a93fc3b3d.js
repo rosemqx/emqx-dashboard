@@ -1,5 +1,8 @@
 webpackJsonp([23],{
-    0:function(e,t,n){n("j1ja"),e.exports=n("NHnr")},
+    0:function(e,t,n){
+        n("j1ja"),
+        e.exports=n("NHnr")
+    },
     "1KhH":function(e,t){},
     "7TWk":function(e,t){},
     "7YgM":function(e,t){e.exports={
@@ -406,13 +409,15 @@ webpackJsonp([23],{
     }
 })}},
 JB6b:function(e,t){},
+
 NHnr:function(e,t,n){
     "use strict";
     Object.defineProperty(t,"__esModule",{value:!0});
     var s=n("fZjL"),a=n.n(s),o=n("7+uW"),i=n("9JMe"),r=n("TXmL"),c=n("zL8q"),l=n.n(c),u=n("urW8"),d=n.n(u),
         p={render:function(){
             var e=this.$createElement,
-            t=this._self._c||e;return t("div",{attrs:{id:"app", style:"display:flex;flex-direction:row;"}},[t("router-view")],1)
+            t=this._self._c||e;
+            return t("div",{attrs:{id:"app", style:"display:flex;flex-direction:row;"}},[t("router-view")],1)
             },
             staticRenderFns:[]
         };
