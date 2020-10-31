@@ -210,7 +210,7 @@ md5_hash(SaltBin, Password) ->
     erlang:md5(<<SaltBin/binary, Password/binary>>).
 
 salt() ->
-    emqx_misc:rand_seed(),
+    {_H,_S} = rand:seed(exsplus, erlang:timestamp()),
     Salt = rand:uniform(16#ffffffff),
     <<Salt:32>>.
 

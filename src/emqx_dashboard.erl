@@ -55,8 +55,8 @@ init(_Args) ->
 
 start(_StartType, _StartArgs) ->
     ok = ekka_mnesia:start(),
-    kvs:join(),
-    n2o:start_mqtt(),
+    ok = kvs:join(),
+    [_|_] = n2o:start_mqtt(),
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 stop(_State) ->
