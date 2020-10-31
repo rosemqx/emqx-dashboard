@@ -37,7 +37,6 @@ init(_Args) ->
     Dispatch = cowboy_router:compile([{'_', [
         { "/n2o/[...]",     cowboy_static,  { dir, "deps/n2o/priv", mime() }},
         { "/nitro/[...]",   cowboy_static,  { dir, "deps/nitro/priv/js", mime() }},
-        { "/app/[...]",     cowboy_static,  { dir, "priv/static", mime() }},
         { "/app/[...]",     cowboy_static,  { dir, "priv/static", mime() }}
         ] ++ minirest:handlers([{"/api/v4/[...]", minirest, http_handlers()}])
     }]),
