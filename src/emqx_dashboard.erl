@@ -18,27 +18,22 @@
 -behaviour(application).
 -behaviour(supervisor).
 
--include_lib("emqx/include/emqx.hrl").
--include_lib("emqx/include/logger.hrl").
-
--import(proplists, [get_value/3]).
-
 -export([start/2 ,stop/1, init/1]).
 
 % app/sup
 init(_Args) ->
-    Admin = #{id => emqx_dashboard_admin,
-            start => {emqx_dashboard_admin, start_link, []},
-            restart => permanent,
-            shutdown => 5000,
-            type => worker,
-            modules => [emqx_dashboard_admin]},
+    % Admin = #{id => emqx_dashboard_admin,
+    %         start => {emqx_dashboard_admin, start_link, []},
+    %         restart => permanent,
+    %         shutdown => 5000,
+    %         type => worker,
+    %         modules => [emqx_dashboard_admin]},
 
     Dispatch = cowboy_router:compile([{'_', [
         { "/n2o/[...]",     cowboy_static,  { dir, "deps/n2o/priv", mime() }},
         { "/nitro/[...]",   cowboy_static,  { dir, "deps/nitro/priv/js", mime() }},
         { "/app/[...]",     cowboy_static,  { dir, "priv/static", mime() }}
-        ] ++ minirest:handlers([{"/api/v4/[...]", minirest, http_handlers()}])
+        ]% ++ minirest:handlers([{"/api/v4/[...]", minirest, http_handlers()}])
     }]),
 
     Opts = #{
@@ -51,56 +46,14 @@ init(_Args) ->
     },
     Spec = ranch:child_spec('http:board', ranch_tcp, Opts, cowboy_clear, #{env => #{dispatch => Dispatch}}),
 
-    {ok, { {one_for_one, 10, 100}, [Admin, Spec] }}.
+    {ok, { {one_for_one, 10, 100}, [Spec] }}.
 
 start(_StartType, _StartArgs) ->
-    ok = ekka_mnesia:start(),
     kvs:join(),
     n2o:start_mqtt(),
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 stop(_State) ->
-    ekka_mnesia:stop(),
     ranch:stop_listener('http:board').
 
 mime()   -> [ { mimetypes, cow_mimetypes, all } ].
-
-%%--------------------------------------------------------------------
-%% HTTP Handlers and Dispatcher
-%%--------------------------------------------------------------------
-
-http_handlers() ->
-    Plugins = lists:map(fun(Plugin) -> Plugin#plugin.name end, emqx_plugins:list()),
-    Cfg = #{apps => [emqx_dashboard | Plugins], modules => [], filter => fun filter/1, except => []},
-    Hnd = minirest_handler:init(Cfg),
-    [{"/api/v4/", Hnd,[{authorization, fun is_authorized/1}]}].
-
-%%--------------------------------------------------------------------
-%% Basic Authorization
-%%--------------------------------------------------------------------
-
-is_authorized(Req) ->
-    is_authorized(binary_to_list(cowboy_req:path(Req)), Req).
-
-is_authorized("/api/v4/auth", _Req) ->
-    true;
-is_authorized(_Path, Req) ->
-    case cowboy_req:parse_header(<<"authorization">>, Req) of
-        {basic, Username, Password} ->
-            case emqx_dashboard_admin:check(iolist_to_binary(Username),
-                                            iolist_to_binary(Password)) of
-                ok -> true;
-                {error, Reason} ->
-                    ?LOG(error, "[Dashboard] Authorization Failure: username=~s, reason=~p",
-                                [Username, Reason]),
-                    false
-            end;
-         _  -> false
-    end.
-
-filter(#{app := emqx_dashboard}) -> true;
-filter(#{app := App}) ->
-    case emqx_plugins:find_plugin(App) of
-        false -> false;
-        Plugin -> Plugin#plugin.active
-    end.

@@ -27,8 +27,9 @@ webpackJsonp([16],{
                         this.loadData(),clearInterval(this.timer),this.timer=setInterval(this.loadData,1e4)
                     },
                     loadData:function(){
-                        var e=this;this.CURRENT_NODE(this.nodeName),
-                            this.$httpGet("/nodes").then(function(t){e.nodes=t.data.sort(function(t,s){return t.node===e.nodeName?-1:t.uptime>s.uptime?-1:1})}),
+                        var e=this;
+                        this.CURRENT_NODE(this.nodeName),
+                        this.$httpGet("/nodes").then(function(t){e.nodes=t.data.sort(function(t,s){return t.node===e.nodeName?-1:t.uptime>s.uptime?-1:1})}),
                         this.$httpGet("/stats").then(function(t){var s=t.data;s.forEach(function(e){var t=d()({node:e.node},e.stats);i()(t).forEach(function(t){var s=n()(t,2),a=s[0],l=s[1],o=a.replace(/\./g,"_");e[o]=l,a.includes(".")&&delete e[a]})}),e.stats=s}),
                         this.$httpGet("/brokers/"+this.nodeName).then(function(t){e.brokers=t.data}),
                         this.$httpGet("/nodes/"+this.nodeName+"/metrics").then(function(t){

@@ -7,7 +7,15 @@ webpackJsonp([19],{
             a=n.n(s),
             o=n("NYxO"),
             l=n("zL8q"),
-            r={name:"listeners-view",components:{"el-select":l.Select,"el-option":l.Option,"el-table":l.Table,"el-table-column":l.TableColumn},data:function(){return{nodeName:"",nodes:[],listeners:[]}},methods:a()({},Object(o.b)(["CURRENT_NODE"]),{loadData:function(){var e=this;this.$httpGet("/nodes").then(function(t){e.nodeName=e.$store.state.nodeName||t.data[0].node,e.nodes=t.data,e.loadListeners()}).catch(function(t){e.$message.error(t||e.$t("error.networkError"))})},loadListeners:function(){var e=this;this.CURRENT_NODE(this.nodeName),this.$httpGet("/nodes/"+this.nodeName+"/listeners").then(function(t){e.listeners=t.data}).catch(function(t){e.$message.error(t||e.$t("error.networkError"))})}}),created:function(){this.loadData()}},i={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;
+            r={name:"listeners-view",components:{"el-select":l.Select,"el-option":l.Option,"el-table":l.Table,"el-table-column":l.TableColumn},
+            data:function(){return{nodeName:"",nodes:[],listeners:[]}},
+            methods:a()({},Object(o.b)(["CURRENT_NODE"]),{
+                loadData:function(){
+                    var e=this;this.$httpGet("/nodes")
+                        .then(function(t){e.nodeName=e.$store.state.nodeName||t.data[0].node,e.nodes=t.data,e.loadListeners()})
+                        .catch(function(t){e.$message.error(t||e.$t("error.networkError"))})
+                },
+                loadListeners:function(){var e=this;this.CURRENT_NODE(this.nodeName),this.$httpGet("/nodes/"+this.nodeName+"/listeners").then(function(t){e.listeners=t.data}).catch(function(t){e.$message.error(t||e.$t("error.networkError"))})}}),created:function(){this.loadData()}},i={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;
     return n("div",{staticClass:"listeners-view"},[
         n("div",{staticClass:"page-title"},[
             e._v("\n    "+e._s(e.$t("leftbar.listeners"))+"\n    "),

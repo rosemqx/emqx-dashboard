@@ -27,7 +27,8 @@ webpackJsonp([23],{
             vuex:"^3.1.1","vuex-router-sync":"^5.0.0"
         },
         devDependencies:{
-            autoprefixer:"^7.1.2","babel-core":"^6.22.1","babel-eslint":"^8.2.1","babel-helper-vue-jsx-merge-props":"^2.0.3","babel-loader":"^7.1.1","babel-plugin-dynamic-import-node":"^2.2.0","babel-plugin-syntax-jsx":"^6.18.0","babel-plugin-transform-runtime":"^6.22.0","babel-plugin-transform-vue-jsx":"^3.5.0","babel-polyfill":"^6.26.0","babel-preset-env":"^1.3.2","babel-preset-stage-2":"^6.22.0",chalk:"^2.0.1","copy-webpack-plugin":"^4.0.1","css-loader":"^0.28.0",eslint:"^4.15.0","eslint-config-airbnb-base":"^11.3.0","eslint-friendly-formatter":"^3.0.0","eslint-import-resolver-webpack":"^0.8.3","eslint-loader":"^1.7.1","eslint-plugin-import":"^2.7.0","eslint-plugin-vue":"^4.0.0","extract-text-webpack-plugin":"^3.0.0","file-loader":"^1.1.4","friendly-errors-webpack-plugin":"^1.6.1","html-webpack-plugin":"^2.30.1","monaco-editor-webpack-plugin":"^1.7.0","node-notifier":"^5.1.2","node-sass":"^4.8.3","optimize-css-assets-webpack-plugin":"^3.2.0",ora:"^1.2.0",portfinder:"^1.0.13","postcss-import":"^11.0.0","postcss-loader":"^2.0.8","postcss-url":"^7.2.1",rimraf:"^2.6.0","sass-loader":"^6.0.7",semver:"^5.3.0",shelljs:"^0.7.6","uglifyjs-webpack-plugin":"^1.1.1","url-loader":"^0.5.8","vue-loader":"^13.7.3","vue-style-loader":"^3.0.1","vue-template-compiler":"^2.5.2",webpack:"3.8.0","webpack-bundle-analyzer":"^3.3.2","webpack-dev-server":"2.9.7","webpack-merge":"^4.1.0"},
+            autoprefixer:"^7.1.2","babel-core":"^6.22.1","babel-eslint":"^8.2.1","babel-helper-vue-jsx-merge-props":"^2.0.3","babel-loader":"^7.1.1","babel-plugin-dynamic-import-node":"^2.2.0","babel-plugin-syntax-jsx":"^6.18.0","babel-plugin-transform-runtime":"^6.22.0","babel-plugin-transform-vue-jsx":"^3.5.0","babel-polyfill":"^6.26.0","babel-preset-env":"^1.3.2","babel-preset-stage-2":"^6.22.0",chalk:"^2.0.1","copy-webpack-plugin":"^4.0.1","css-loader":"^0.28.0",eslint:"^4.15.0","eslint-config-airbnb-base":"^11.3.0","eslint-friendly-formatter":"^3.0.0","eslint-import-resolver-webpack":"^0.8.3","eslint-loader":"^1.7.1","eslint-plugin-import":"^2.7.0","eslint-plugin-vue":"^4.0.0","extract-text-webpack-plugin":"^3.0.0","file-loader":"^1.1.4","friendly-errors-webpack-plugin":"^1.6.1","html-webpack-plugin":"^2.30.1","monaco-editor-webpack-plugin":"^1.7.0","node-notifier":"^5.1.2","node-sass":"^4.8.3","optimize-css-assets-webpack-plugin":"^3.2.0",ora:"^1.2.0",
+            portfinder:"^1.0.13","postcss-import":"^11.0.0","postcss-loader":"^2.0.8","postcss-url":"^7.2.1",rimraf:"^2.6.0","sass-loader":"^6.0.7",semver:"^5.3.0",shelljs:"^0.7.6","uglifyjs-webpack-plugin":"^1.1.1","url-loader":"^0.5.8","vue-loader":"^13.7.3","vue-style-loader":"^3.0.1","vue-template-compiler":"^2.5.2",webpack:"3.8.0","webpack-bundle-analyzer":"^3.3.2","webpack-dev-server":"2.9.7","webpack-merge":"^4.1.0"},
             engines:{node:">= 6.0.0",npm:">= 3.0.0"},
             browserslist:["> 1%","last 2 versions","not ie <= 8"]
         }
@@ -94,7 +95,10 @@ webpackJsonp([23],{
             clients:{
                 node:"Node",
                 nodeName:"Node Name",clientId:"Client ID",username:"Username",ipAddr:"IP Address",
-                port:"Port",cleanStart:"CleanStart",keepalive:"Keepalive(s)",back:"Back",
+                port:"Port",
+                cleanStart:"CleanStart",
+                keepalive:"Keepalive(s)",
+                back:"Back",
                 subscriptionsCount:"Subscriptions Count",expiryInterval:"Expiry Interval(s)",
                 maxInflight:"MaxInflight",inflightLen:"Inflight Len",mqueueLen:"MqueueLen",
                 mqueueDropped:"MqueueDropped",awaitingRelLen:"AwaitingRelLen",deliverMsg:"DeliverMsg",
@@ -175,8 +179,14 @@ webpackJsonp([23],{
             app:{
                 appId:"AppID",secret:"AppSecret",newApp:"New App",viewApp:"View App",
                 editApp:"Edit App",create:"Create",errors:"Option Required",name:"AppName",desc:"Remark",expired:"Expired date",
-                status:"Status",enable:"Allowed",disable:"Denied",enableText:"Access allowed",disableText:"Access barred",
-                expiredText:"Never expired",guide:"Application for authentication of EMQ X Management API (REST API)",docs:"Documentation"
+                status:"Status",
+                enable:"Allowed",
+                disable:"Denied",
+                enableText:"Access allowed",
+                disableText:"Access barred",
+                expiredText:"Never expired",
+                guide:"Application for authentication of EMQ X Management API (REST API)",
+                docs:"Documentation"
             },
             users:{
                 newUser:"New User",editUser:"Edit User",username:"Username",remark:"Remark",
@@ -266,7 +276,7 @@ webpackJsonp([23],{
         overview:"Огляд",
         connections:"З'єднання",
         sessions:"Сесії",
-        management:"管理",
+        management:"Управління",
         instances:"服务",
         admin:"Адміністратор"
     },
@@ -285,11 +295,23 @@ webpackJsonp([23],{
         maxFds:"最大文件句柄数",status:"状态",stats:"运行统计",topicsCount:"主题数",topicsMax:"峰值",connectionsCount:"连接数",connectionsMax:"峰值",retainedCount:"保留消息数",retainedMax:"最大保留消息数",sessionsCount:"会话数",sessionsMax:"峰值",subscribersCount:"订阅数",subscribersMax:"峰值",subscriptionsCount:"订阅数",subscriptionsMax:"峰值",subscriptionsSharedCount:"共享订阅数",subscriptionsSharedMax:"峰值",metrics:"度量指标",
         packetsData:"MQTT 报文",
         messagesData:"消息",
-        bytesData:"流量收发(字节)",session:"会话",client:"客户端",delivery:"Delivery"},clients:{node:"节点",nodeName:"节点名称",clientId:"客户端 ID",username:"用户名",ipAddr:"IP 地址",port:"端口",cleanStart:"清除会话",keepalive:"心跳（秒）",back:"返回",subscriptionsCount:"当前订阅数量",expiryInterval:"会话过期间隔（秒）",maxInflight:"最大拥塞",inflightLen:"当前拥塞",mqueueLen:"当前缓存消息",mqueueDropped:"丢弃消息",awaitingRelLen:"等待释放",deliverMsg:"投递消息",enqueueMsg:"入队消息",createdAt:"会话创建时间",connectedAt:"连接时间",connected:"连接状态",clientsDetails:"详情",basicInfo:"基础信息",subsInfo:"订阅列表",protoVer:"协议版本",protoName:"协议名称",protoType:"协议类型",connectInfo:"连接信息",isBridge:"是否为桥接",disconnectAt:"断开连接时间",session:"会话信息",max:"最大",subscriptions:"订阅数量",inflight:"飞行窗口",mqueue:"消息队列",awaiting_rel:"未确认的 PUBREC 数据包计数",recv_cnt_desc:"接收的 TCP 报文数量",recv_msg_desc:"接收的 PUBLISH 报文数量",recv_oct_desc:"接收的字节数量",recv_pkt_desc:"接收的 MQTT 报文数量",send_cnt_desc:"发送的 TCP 报文数量",send_msg_desc:"发送的 PUBLISH 报文数量",send_oct_desc:"发送的字节数量",
+        bytesData:"流量收发(字节)",session:"会话",client:"客户端",delivery:"Delivery"},
+        clients:{
+            node:"节点",
+            nodeName:"节点名称",
+            clientId:"客户端 ID",
+            username:"用户名",
+            ipAddr:"IP 地址",
+            port:"Порт",
+            cleanStart:"清除会话",keepalive:"心跳（秒）",back:"返回",subscriptionsCount:"当前订阅数量",expiryInterval:"会话过期间隔（秒）",maxInflight:"最大拥塞",inflightLen:"当前拥塞",mqueueLen:"当前缓存消息",mqueueDropped:"丢弃消息",awaitingRelLen:"等待释放",deliverMsg:"投递消息",enqueueMsg:"入队消息",createdAt:"会话创建时间",connectedAt:"连接时间",connected:"连接状态",clientsDetails:"详情",basicInfo:"基础信息",subsInfo:"订阅列表",protoVer:"协议版本",protoName:"协议名称",protoType:"协议类型",connectInfo:"连接信息",isBridge:"是否为桥接",disconnectAt:"断开连接时间",session:"会话信息",max:"最大",subscriptions:"订阅数量",inflight:"飞行窗口",mqueue:"消息队列",awaiting_rel:"未确认的 PUBREC 数据包计数",recv_cnt_desc:"接收的 TCP 报文数量",recv_msg_desc:"接收的 PUBLISH 报文数量",recv_oct_desc:"接收的字节数量",recv_pkt_desc:"接收的 MQTT 报文数量",send_cnt_desc:"发送的 TCP 报文数量",send_msg_desc:"发送的 PUBLISH 报文数量",send_oct_desc:"发送的字节数量",
         send_pkt_desc:"发送的 MQTT 报文数量",currentSubs:"当前订阅数",addSubs:"添加订阅",view:"详情",disconnected:"已断开",kickOut:"踢除"},topics:{topic:"主题",node:"节点"},subscriptions:{clientId:"客户端 ID",topic:"主题",qoS:"QoS",share:"共享订阅"},plugins:{name:"插件名称",version:"版本",description:"描述",status:"状态",stopped:"已停止",running:"运行中",start:"启动",stop:"停止",config:"配置",manage:"管理",tutorial:"使用文档",back:"返回",advancedConfig:"高级配置",add:"新增",configSuccess:"配置成功",configFailure:"配置失败",notice:"你确定提交这些配置吗？重启插件后生效",giveUpNotice:"你确定放弃应用已更改的配置吗？",noticeTitle:"注意",cacheNotice:"已放弃操作",emptyConfigOption:"默认配置项为空",searchByName:"按插件名称搜索",
         usernameRequired:"请填写 username",
         passwordRequired:"请填写 password",
-        clientidRequired:"请填写 Client ID",algorithm:"加密算法",secret:"密钥或私钥",payloadDesc:"启用 verify_claims 时有效, 可以使用 %u，%c 占位符分别替换输入的 username 和 clientid，详见",jwtDoc:"JWT 认证",dataDesc:"一行一组数据，使用逗号分割 username,clientid",secretRequired:"请输入 Secret",payloadRequired:"请输入 Payload 模版",dataRequired:"请填写 Payload 数据",leaveTokenPage:"离开页面后当前输入的配置与生成的 TOKEN 信息均不再保留，确认离开？"},modules:{name:"模块名称",enable:"启用",disable:"停用",enabled:"已启用",disabled:"已停用"},instances:{instances:"服务",back:"返回",info:"基本信息",name:"实例名称",descr:"备注信息",service:"所属服务",configInfo:"配置信息",initConfig:"初始化配置或",remarkConfig:"请输入备注信息",createInstance:"新建服务",selectServiceType:"选择实例类型",all:"全部",running:"运行中",stopped:"已停止",auth:"认证",backend:"持久化",hook:"回调钩子",bridge:"数据桥接",other:"其他",select:"选择",selected:"已选择",nextStep:"下一步",authDesc:"提供登录认证与发布订阅 ACL 服务。",backendDesc:"提供消息持久化到数据库服务。",bridgeDesc:"提供将消息流桥接为消息中间件数据源服务。",hookDesc:"使用触发回调机制响应操作的服务。",otherDesc:"系统运行信息等其他服务。"},listeners:{protocol:"协议",listenOn:"监听地址",maxConnections:"最大连接数",currentConnections:"当前连接数"},websocket:{connect:"连接",host:"主机地址",port:"端口",clientID:"客户端 ID",username:"用户名",password:"密码",keepAlive:"心跳（秒）",cleanSession:"清除会话",disconnect:"断开连接",currentState:"当前状态",subscribe:"订阅",topic:"主题",qoS:"服务质量",date:"订阅时间",oper:"操作",messages:"消息",retained:"保留",send:"发送",messagesAlreadySent:"发布消息列表",messagesReceived:"订阅消息列表",time:"时间",connectError:"消息发送错误",connectFailure:"连接失败",connectLeave:"尚未连接到服务器",subscribeSuccess:"订阅成功",subscribeFailure:"订阅失败",messageSendOut:"消息已发出",connected:"已连接",connecting:"正在连接",disconnected:"未连接",notSupport:"你的浏览器暂不支持WebSocket"},httpApi:{introduction:"说明",desc:"除了帮助页面，所有URI返回application/json格式的的资源，每个请求都需要HTTP基本认证。默认用户是admin / public。<br/>emqx_dashboard插件提供了一个Web管理控制台, 用于监控服务器的运行状态，数据统计和MQTT包计数监控。",reference:"参考",method:"请求方法",path:"路径",description:"描述",back:"返回",linkAddress:"请求地址",data:"响应数据"},app:{appId:"AppID",secret:"App密钥",newApp:"新建APP",viewApp:"查看App",editApp:" 编辑App",errors:"该项为必填项",name:"App名称",desc:"备注",expired:"到期日期",status:"状态",enable:"允许访问",disable:"拒绝访问",enableText:"允许访问",disableText:"拒绝访问",expiredText:"永不过期",guide:"应用用于 EMQ X 管理监控 API (REST API) 连接认证，详见",docs:"文档"},users:{newUser:"新建用户",editUser:"编辑用户",username:"用户名",remark:"备注",password:"密码",confirmPassword:"确认密码",oldPassword:"旧密码",newPassword:"新密码",confirmNewPassword:"确认新密码",changePassword:"修改密码",dontChangePassword:"不修改密码",usernameRequired:"请填写用户名",remarkRequired:"请填写备注",usernameIllegal:"用户名长度: 3~32",passwordRequired:"请填写密码",newPasswordRequired:"请填写新密码",passwordInconsistent:"密码不一致",authenticate:"你已成功修改已登录用户密码，请重新登录",createUser:"新建用户成功",passwordIllegal:"密码长度: 3~255"},alert:{required:"字段是必填项",success:"成功",failure:"失败",connect:"连接"},
+        clientidRequired:"请填写 Client ID",algorithm:"加密算法",secret:"密钥或私钥",payloadDesc:"启用 verify_claims 时有效, 可以使用 %u，%c 占位符分别替换输入的 username 和 clientid，详见",jwtDoc:"JWT 认证",dataDesc:"一行一组数据，使用逗号分割 username,clientid",secretRequired:"请输入 Secret",payloadRequired:"请输入 Payload 模版",dataRequired:"请填写 Payload 数据",leaveTokenPage:"离开页面后当前输入的配置与生成的 TOKEN 信息均不再保留，确认离开？"},modules:{name:"模块名称",enable:"启用",disable:"停用",enabled:"已启用",disabled:"已停用"},instances:{instances:"服务",back:"返回",info:"基本信息",name:"实例名称",descr:"备注信息",service:"所属服务",configInfo:"配置信息",initConfig:"初始化配置或",remarkConfig:"请输入备注信息",createInstance:"新建服务",selectServiceType:"选择实例类型",all:"全部",running:"运行中",stopped:"已停止",auth:"认证",backend:"持久化",hook:"回调钩子",bridge:"数据桥接",other:"其他",select:"选择",selected:"已选择",nextStep:"下一步",authDesc:"提供登录认证与发布订阅 ACL 服务。",backendDesc:"提供消息持久化到数据库服务。",bridgeDesc:"提供将消息流桥接为消息中间件数据源服务。",hookDesc:"使用触发回调机制响应操作的服务。",otherDesc:"系统运行信息等其他服务。"},listeners:{protocol:"协议",listenOn:"监听地址",maxConnections:"最大连接数",currentConnections:"当前连接数"},
+        websocket:{connect:"连接",host:"主机地址",port:"Порт",clientID:"客户端 ID",username:"用户名",password:"密码",keepAlive:"心跳（秒）",cleanSession:"清除会话",disconnect:"断开连接",currentState:"当前状态",subscribe:"订阅",topic:"主题",qoS:"服务质量",date:"订阅时间",oper:"操作",messages:"消息",retained:"保留",send:"发送",messagesAlreadySent:"发布消息列表",messagesReceived:"订阅消息列表",time:"时间",connectError:"消息发送错误",connectFailure:"连接失败",connectLeave:"尚未连接到服务器",subscribeSuccess:"订阅成功",subscribeFailure:"订阅失败",messageSendOut:"消息已发出",connected:"已连接",connecting:"正在连接",disconnected:"未连接",
+            notSupport:"你的浏览器暂不支持WebSocket"
+        },
+        httpApi:{introduction:"说明",desc:"除了帮助页面，所有URI返回application/json格式的的资源，每个请求都需要HTTP基本认证。默认用户是admin / public。<br/>emqx_dashboard插件提供了一个Web管理控制台, 用于监控服务器的运行状态，数据统计和MQTT包计数监控。",reference:"参考",method:"请求方法",path:"路径",description:"描述",back:"返回",linkAddress:"请求地址",data:"响应数据"},app:{appId:"AppID",secret:"App密钥",newApp:"新建APP",viewApp:"查看App",editApp:" 编辑App",errors:"该项为必填项",name:"App名称",desc:"备注",expired:"到期日期",status:"状态",enable:"允许访问",disable:"拒绝访问",enableText:"允许访问",disableText:"拒绝访问",expiredText:"永不过期",guide:"应用用于 EMQ X 管理监控 API (REST API) 连接认证，详见",docs:"文档"},users:{newUser:"新建用户",editUser:"编辑用户",username:"用户名",remark:"备注",password:"密码",confirmPassword:"确认密码",oldPassword:"旧密码",newPassword:"新密码",confirmNewPassword:"确认新密码",changePassword:"修改密码",dontChangePassword:"不修改密码",usernameRequired:"请填写用户名",remarkRequired:"请填写备注",usernameIllegal:"用户名长度: 3~32",passwordRequired:"请填写密码",newPasswordRequired:"请填写新密码",passwordInconsistent:"密码不一致",authenticate:"你已成功修改已登录用户密码，请重新登录",createUser:"新建用户成功",passwordIllegal:"密码长度: 3~255"},alert:{required:"字段是必填项",success:"成功",failure:"失败",connect:"连接"},
         login:{
             title:"Вхід",
             username:"Користувач",
@@ -318,7 +340,8 @@ webpackJsonp([23],{
         more:"更多信息",
         reSelect:"重新选择",
         not_a_valid_config_file:"不是合法的配置文件",
-        payload_error:"无效的内容",import_file_error:"导入文件出错",exportConfig:"导出配置",ex:"导出",atLeastThree:"至少3个字符",importSuccess:"导入成功",notice:"使用备份的配置文件进行配置初始化/修改。<br/>注意: 配置文件可能包含有重要数据如数据库地址与认证信息，请妥善保管配置文件并合理使用备份功能。"},
+        payload_error:"无效的内容",import_file_error:"导入文件出错",exportConfig:"导出配置",ex:"导出",atLeastThree:"至少3个字符",
+        importSuccess:"导入成功",notice:"使用备份的配置文件进行配置初始化/修改。<br/>注意: 配置文件可能包含有重要数据如数据库地址与认证信息，请妥善保管配置文件并合理使用备份功能。"},
         help:{
             quickStart:"快速开始",
             emqxDesc:"EMQ X 基于 Erlang/OTP 平台开发的 MQTT 消息服务器，是开源社区中最流行的 MQTT 消息服务器，支持丰富的物联网协议，包括 MQTT、LwM2M、MQTT-SN、CoAP、 LoRaWAN、 HTTP 和 WebSocket 等。欢迎 follow 我们的项目或参与构建。",
@@ -384,7 +407,10 @@ webpackJsonp([23],{
         username_doc:"Current MQTT username",
         event_doc:"Trigger event name",
         id_doc:"MQTT message id",
-        payload_doc:"The payload, if in JSON format, will be automatically decoded, and the object information will be obtained by using payload.x in SQL",peerhost_doc:"Client peer name",qos_doc:"Enumeration of message QoS 0,1,2",timestamp_doc:"Timestamp(millisecond)",topic_doc:"Currently MQTT topic can be filtered by wildcards in SQL.  When multiple topics are included in subscribe and unsubscribe, only the first one will be obtained here. To obtain all topics, please use topic_filters",node_doc:"Node name of the trigger event",message_delivered:"message delivered",message_acked:"message acked",message_dropped:"message dropped",client_connected:"client connected",client_disconnected:"client disconnected",session_subscribed:"session subscribed",session_unsubscribed:"session unsubscribed",parse_confirm:"Detected incompatible old SQL syntax, confirm to automatically convert it to the new version?",fallbackAction:"Fallback Actions",fallbackActionCreate:"Set the action that will be performed when an action execution error occurs (optional)",fallbackActionTip:"Action to be performed when the action execution error"}}),zh:a()({},u,{rule:{viewStates:"状态",topic:"主题",node:"节点",all:"合计",connectSuccess:"连接成功",speed_unit:"次/秒",match_unit:"次",match_rate:"命中率",success:"成功",failed:"失败",params:"参数",matched_line:"(命中/未命中)",speed_line:"(当前/最大/最近5分钟)",current:"当前",max:"最大",last5m:"最近5分钟",metrics:"度量指标",speed:"速度(秒)",speed_max:"最大命中速度",speed_last5m:"5分钟平均速度",rule_matched:"匹配条数",rule_nomatch:"未匹配条数",speed_current:"命中速度",speed_max_1:"最大命中速度",speed_last5m_1:"5分钟平均速度",rule_matched_1:"已命中",rule_nomatch_1:"未命中",enabled:"可用",disabled:"不可用",running_statue:"运行状态",reconnect:"重新连接",connect:"连接",stopped:"已停止",running:"运行中",no_test_output:"暂无结果",test_output:"测试输出",test:"测试",input_test_data:"SQL 测试",input_test_data_tips:"自定义模拟数据进行 SQL 命令测试，仅用于测试功能",is_required:"必填",conf_test:"测试连接",conf_test_success:"连接可用",conf_test_fail:"连接不可用",new_resource:"新建资源",action_type:"动作类型",event_info:"可用字段",suggest_sql:"规则 SQL 示例",upgrade_tip:"升级提示",json_decode_upgrade:"当前版本取消对 payload 的自动 JSON 解码，选择 payload 中的字段请使用 json_decode 解码，如 SQL 示例。",events:{message_acked:"消息确认",message_dropped:"消息丢弃",message_publish:"消息发布",message_delivered:"消息投递",client_unsubscribe:"取消订阅",client_subscribe:"订阅",client_disconnected:"连接断开",client_connected:"连接完成"},trigger_events:"触发事件",id:"ID",exists:"键重复",data_key:"键",data_value:"值",rely_resource:"关联资源",actions_tips:"处理命中规则的消息",conditional_tips:"使用 SQL 定义规则条件与数据处理方式",conditional:"条件",rule_engine:"规则引擎",message_rule:"规则",create:"新建",rule_name:"规则名称",actions:"响应动作",action:"动作",resource:"关联资源",oper:"操作",view:"查看",confirm:"确认",delete:"删除",rule_details:"规则详情",rule_desc:"规则描述",confirm_stop_delete:"确认停用并删除？",delete_success:"删除成功",action_exists:"动作已存在",cancel:"取消",resource_mgmt:"资源管理",name:"名称",resource_type:"资源类型",description:"备注",create_success:"创建成功",type:"类型",value:"值",edit:"编辑",add:"添加",ruleEnabled:"已启动",ruleDisabled:"已停止",basic_info:"基本信息",rule_name_required:"请输入规则名称",rule_sql:"规则 SQL",rule_descr_placeholder:"e.g.消息转发到 Webhook",
+        payload_doc:"The payload, if in JSON format, will be automatically decoded, and the object information will be obtained by using payload.x in SQL",peerhost_doc:"Client peer name",qos_doc:"Enumeration of message QoS 0,1,2",timestamp_doc:"Timestamp(millisecond)",topic_doc:"Currently MQTT topic can be filtered by wildcards in SQL.  When multiple topics are included in subscribe and unsubscribe, only the first one will be obtained here. To obtain all topics, please use topic_filters",node_doc:"Node name of the trigger event",message_delivered:"message delivered",message_acked:"message acked",message_dropped:"message dropped",client_connected:"client connected",client_disconnected:"client disconnected",session_subscribed:"session subscribed",session_unsubscribed:"session unsubscribed",parse_confirm:"Detected incompatible old SQL syntax, confirm to automatically convert it to the new version?",fallbackAction:"Fallback Actions",fallbackActionCreate:"Set the action that will be performed when an action execution error occurs (optional)",fallbackActionTip:"Action to be performed when the action execution error"}}),zh:a()({},u,{rule:{viewStates:"状态",topic:"主题",
+        node:"节点",all:"合计",connectSuccess:"连接成功",speed_unit:"次/秒",match_unit:"次",match_rate:"命中率",success:"成功",failed:"失败",
+        params:"参数",
+        matched_line:"(命中/未命中)",speed_line:"(当前/最大/最近5分钟)",current:"当前",max:"最大",last5m:"最近5分钟",metrics:"度量指标",speed:"速度(秒)",speed_max:"最大命中速度",speed_last5m:"5分钟平均速度",rule_matched:"匹配条数",rule_nomatch:"未匹配条数",speed_current:"命中速度",speed_max_1:"最大命中速度",speed_last5m_1:"5分钟平均速度",rule_matched_1:"已命中",rule_nomatch_1:"未命中",enabled:"可用",disabled:"不可用",running_statue:"运行状态",reconnect:"重新连接",connect:"连接",stopped:"已停止",running:"运行中",no_test_output:"暂无结果",test_output:"测试输出",test:"测试",input_test_data:"SQL 测试",input_test_data_tips:"自定义模拟数据进行 SQL 命令测试，仅用于测试功能",is_required:"必填",conf_test:"测试连接",conf_test_success:"连接可用",conf_test_fail:"连接不可用",new_resource:"新建资源",action_type:"动作类型",event_info:"可用字段",suggest_sql:"规则 SQL 示例",upgrade_tip:"升级提示",json_decode_upgrade:"当前版本取消对 payload 的自动 JSON 解码，选择 payload 中的字段请使用 json_decode 解码，如 SQL 示例。",events:{message_acked:"消息确认",message_dropped:"消息丢弃",message_publish:"消息发布",message_delivered:"消息投递",client_unsubscribe:"取消订阅",client_subscribe:"订阅",client_disconnected:"连接断开",client_connected:"连接完成"},trigger_events:"触发事件",id:"ID",exists:"键重复",data_key:"键",data_value:"值",rely_resource:"关联资源",actions_tips:"处理命中规则的消息",conditional_tips:"使用 SQL 定义规则条件与数据处理方式",conditional:"条件",rule_engine:"规则引擎",message_rule:"规则",create:"新建",rule_name:"规则名称",actions:"响应动作",action:"动作",resource:"关联资源",oper:"操作",view:"查看",confirm:"确认",delete:"删除",rule_details:"规则详情",rule_desc:"规则描述",confirm_stop_delete:"确认停用并删除？",delete_success:"删除成功",action_exists:"动作已存在",cancel:"取消",resource_mgmt:"资源管理",name:"名称",resource_type:"资源类型",description:"备注",create_success:"创建成功",type:"类型",value:"值",edit:"编辑",add:"添加",ruleEnabled:"已启动",ruleDisabled:"已停止",basic_info:"基本信息",rule_name_required:"请输入规则名称",rule_sql:"规则 SQL",rule_descr_placeholder:"e.g.消息转发到 Webhook",
         rule_sql_tips_title:"编写 SQL 进行条件过滤与数据处理：",
         sql_tips_html:'<p>EMQ X 在消息发布、事件触发时将触发规则引擎，满足触发条件的规则将执行各自的 SQL 语句筛选并处理消息和事件的上下文信息。</p>\n  <p class="item">规则引擎借助响应动作可将特定主题的消息处理结果存储到数据库，发送到 HTTP Server，转发到消息队列 Kafka 或 RabbitMQ，重新发布到新的主题甚至是另一个 Broker 集群中，每个规则可以配置多个响应动作。</p>\n\n  <p>1. 选择发布到 \'t/#\' 主题的消息，并筛选出全部字段：</p>\n\n  <div class="code">\n    <code>SELECT * FROM  "t/#"</code>\n  </div>\n\n  <p>2. 选择发布到 \'t/a\' 主题的消息，并从 JSON 格式的消息内容中筛选出 "x" 字段：</p>\n\n  <div class="code">\n    <code>SELECT payload.x as x FROM "t/a"</code>\n  </div>\n\n  <p class="item">规则引擎使用 $events/ 开头的虚拟主题（事件主题）处理 EMQ X 内置事件，内置事件提供更精细的消息控制和客户端动作处理能力，可用在 QoS 1 QoS 2 的消息抵达记录、设备上下线记录等业务中。<p>\n\n  <p>1. 选择客户端连接事件，筛选 Username 为 \'emqx\' 的设备并获取连接信息：</p>\n  <div class="code">\n    <code>SELECT clientid, connected_at FROM "$events/client_connected" WHERE username = \'emqx\'</code>\n  </div>\n\n  <p>规则引擎和 SQL 语句的详细教程参见 EMQ X 文档。</p>',condition_screening:"条件筛选",topic_condition:"主题条件",message_publish_topic:"消息发布主题",set_action:"响应动作",sql_required:"请输入 SQL",actions_required:"动作不能为空",rule_action_tips_title:"定义动作",action_tips_html:"\n<p>1. 重新发布消息至消息服务器</p>\n<span>将消息重新发布到 broker 中，需要指定目标主题</span>\n<p>2. 将消息转发至 Webhook</p>\n<span>将消息转发至 HTTP Webhook</span>",
         resource_title:"Ресурси",
@@ -555,7 +581,10 @@ NHnr:function(e,t,n){
                     o.default.use(l.a),
                     o.default.prototype.$ELEMENT={size:"medium"},
                     o.default.use(function(e){
-                        e.prototype.$httpGet=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return t._=Date.now(),I.a.get(e,{params:t})},
+                        e.prototype.$httpGet=function(e){
+                            var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};
+                            return t._=Date.now(),I.a.get(e,{params:t})
+                        },
                         e.component(w.name,w),
                         e.component(x.name,x),
                         e.prototype.$httpPost=I.a.post,
@@ -669,17 +698,45 @@ cHtD:function(e,t,n){
                     }),a);
                     t.a=new u.a.Store({strict:!1,state:b,actions:f,mutations:g})},
                     rBGa:function(e,t){},
-                    w7XY:function(e,t,n){"use strict";var s=n("pFYg"),a=n.n(s),o=n("//Fk"),i=n.n(o),r=n("woOf"),c=n.n(r),l=n("mtWM"),u=n.n(l),d=n("Y81h"),p=n.n(d),m=n("UVIz"),h=(n.n(m),n("zL8q")),
-            b=(n.n(h), n("cHtD")),
-            f=n("olkN"),
-            g=n("HL/F"),
-            _=["zh","en"].includes(localStorage.language) ? localStorage.language:window.EMQX_DASHBOARD_CONFIG.lang||"en",
-            v=(g.a[_]||g.a.en).httpCode;
-            p.a.configure({showSpinner:!1}),c()(u.a.defaults,{headers:{"Content-Type":"application/json","Cache-Control":"no-cache"},baseURL:"/api/v4",timeout:1e4});var S=0;function w(e){console.error(e),p.a.done(),clearTimeout(S),f.a.dispatch("LOADING",!1);var t=e.response&&e.response.status;return e.response&&e.response.data.message&&(e.message=e.response.data.message),
-            401===t ?
-                (f.a.dispatch("USER_LOGIN",{isLogOut:!0}),
-                b.a.push({path:"/login",query:{to:b.a.fullPath}})) :
-                404===t ?
-                    e.message="URL Not Found":
-                    function(e){"module_not_loaded"!==e.message&&h.Message.error(e.message)}(e),i.a.reject(e.message)
-                }u.a.interceptors.request.use(function(e){return f.a.state.user.username?e.auth={username:f.a.state.user.username,password:f.a.state.user.password}:b.a.push({path:"/login",query:{to:b.a.fullPath}}),p.a.start(),S=setTimeout(function(){f.a.dispatch("LOADING",!0)},100),e},function(e){console.warn("Request Error: ",e),f.a.dispatch("LOADING",!1)}),u.a.interceptors.response.use(function(e){var t={},n="";if("object"===a()(e.data)){var s=e.status,o=e.data,i=o.code,r=o.meta,c=o.message,l=e.data.data;0!==i&&(n=v[i]||c),r&&(l={items:l,meta:r}),t={data:l,status:s}}if(p.a.done(),clearTimeout(S),S=0,f.a.dispatch("LOADING",!1),n){var u=new Error(n);throw w(u),u}return t},w),t.a=u.a}},[0]);
+                    w7XY:function(e,t,n){
+                        "use strict";
+                        var s=n("pFYg"),
+                            a=n.n(s),
+                            o=n("//Fk"),
+                            i=n.n(o),
+                            r=n("woOf"),
+                            c=n.n(r),
+                            l=n("mtWM"),
+                            u=n.n(l),
+                            d=n("Y81h"),
+                            p=n.n(d),
+                            m=n("UVIz"),
+                            h=(n.n(m), n("zL8q")),
+                            b=(n.n(h), n("cHtD")),
+                            f=n("olkN"),
+                            g=n("HL/F"),
+                            _=["zh","en"].includes(localStorage.language) ? localStorage.language:window.EMQX_DASHBOARD_CONFIG.lang||"en",
+                            v=(g.a[_]||g.a.en).httpCode;
+                    p.a.configure({showSpinner:!1}),
+                    c()(u.a.defaults,{
+                        headers:{
+                            "Content-Type":"application/json",
+                            "Cache-Control":"no-cache"
+                        },
+                        baseURL:"http://127.0.0.1:8080/api/v4",
+                        timeout:1e4
+                    });
+                    var S=0;function w(e){
+                        console.error(e),
+                        p.a.done(),
+                        clearTimeout(S),
+                        f.a.dispatch("LOADING",!1);
+                        var t=e.response&&e.response.status;
+                        return e.response&&e.response.data.message&&(e.message=e.response.data.message),
+                            401===t ?
+                                (f.a.dispatch("USER_LOGIN",{isLogOut:!0}),
+                                b.a.push({path:"/login",query:{to:b.a.fullPath}})) :
+                                404===t ?
+                                    e.message="URL Not Found":
+                                    function(e){"module_not_loaded"!==e.message&&h.Message.error(e.message)}(e),i.a.reject(e.message)
+                                }u.a.interceptors.request.use(function(e){return f.a.state.user.username?e.auth={username:f.a.state.user.username,password:f.a.state.user.password}:b.a.push({path:"/login",query:{to:b.a.fullPath}}),p.a.start(),S=setTimeout(function(){f.a.dispatch("LOADING",!0)},100),e},function(e){console.warn("Request Error: ",e),f.a.dispatch("LOADING",!1)}),u.a.interceptors.response.use(function(e){var t={},n="";if("object"===a()(e.data)){var s=e.status,o=e.data,i=o.code,r=o.meta,c=o.message,l=e.data.data;0!==i&&(n=v[i]||c),r&&(l={items:l,meta:r}),t={data:l,status:s}}if(p.a.done(),clearTimeout(S),S=0,f.a.dispatch("LOADING",!1),n){var u=new Error(n);throw w(u),u}return t},w),t.a=u.a}},[0]);

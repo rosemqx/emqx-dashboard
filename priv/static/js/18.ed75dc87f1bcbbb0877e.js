@@ -14,6 +14,7 @@ webpackJsonp([18],{
                     Object(l.b)(["USER_LOGIN"]),
                     {
                     login:function(){
+                        console.log("login==>", this.$axios);
                         var e=this;
                         return this.user.username ?
                             this.user.password ?
@@ -35,7 +36,34 @@ webpackJsonp([18],{
                     return s("div",{staticClass:"login-view"},[
                         s("el-card",[
                             s("div",{attrs:{slot:"header"},slot:"header"},[
-                                e._v("\n      "+e._s(e.$t("login.title"))+"\n    ")]),e._v(" "),s("el-form",{staticClass:"el-form--public",attrs:{size:"medium","label-position":"top",model:e.user},nativeOn:{keyup:function(r){return!r.type.indexOf("key")&&e._k(r.keyCode,"enter",13,r.key,"Enter")?null:e.login(r)}}},[s("el-form-item",{attrs:{label:e.$t("login.username")}},[s("el-input",{class:{error:e.loginError.username},attrs:{placeholder:e.loginError.username},on:{focus:function(r){e.loginError.username=""}},model:{value:e.user.username,callback:function(r){e.$set(e.user,"username",r)},expression:"user.username"}})],1),e._v(" "),s("el-form-item",{attrs:{label:e.$t("login.password")}},[s("el-input",{class:{error:e.loginError.password},attrs:{type:"password",placeholder:e.loginError.password},on:{focus:function(r){e.loginError.password=""}},model:{value:e.user.password,callback:function(r){e.$set(e.user,"password",r)},expression:"user.password"}})],1)],1),e._v(" "),s("div",{staticClass:"login-footer"},[s("el-checkbox",{model:{value:e.remember,callback:function(r){e.remember=r},expression:"remember"}},[e._v("\n        "+e._s(e.$t("login.remember"))+"\n      ")]),e._v(" "),s("el-button",{staticClass:"confirm-btn",attrs:{type:"success",loading:e.$store.state.loading,disabled:e.$store.state.loading},on:{click:e.login}},[e._v(e._s(e.$t("login.loginButton"))+"\n      ")])],1),e._v(" "),s("div",{staticClass:"clear-fix"})],1)],1)},
+                                e._v("\n      "+e._s(e.$t("login.title"))+"\n    ")]),
+                            e._v(" "),
+                            s("el-form",{staticClass:"el-form--public",attrs:{size:"medium","label-position":"top",model:e.user},
+                            nativeOn:{
+                                keyup:function(r){return!r.type.indexOf("key")&&e._k(r.keyCode,"enter",13,r.key,"Enter")?null:e.login(r)}
+                            }},[
+                                s("el-form-item",{attrs:{label:e.$t("login.username")}},[
+                                    s("el-input",{class:{error:e.loginError.username},
+                                        attrs:{placeholder:e.loginError.username},
+                                        on:{focus:function(r){e.loginError.username=""}},
+                                        model:{value:e.user.username,callback:function(r){e.$set(e.user,"username",r)},expression:"user.username"}})],1),
+                                e._v(" "),
+                                s("el-form-item",{attrs:{label:e.$t("login.password")}},[
+                                    s("el-input",{class:{error:e.loginError.password},
+                                        attrs:{type:"password",placeholder:e.loginError.password},
+                                        on:{focus:function(r){e.loginError.password=""}},
+                                        model:{value:e.user.password,callback:function(r){
+                                            e.$set(e.user,"password",r)},expression:"user.password"}})],1)],1),e._v(" "),
+                                s("div",{staticClass:"login-footer"},[
+                                    s("el-checkbox",{model:{value:e.remember,callback:function(r){e.remember=r},expression:"remember"}},[
+                                        e._v("\n        "+e._s(e.$t("login.remember"))+"\n      ")]),
+                                    e._v(" "),
+                                    s("el-button",{
+                                        staticClass:"confirm-btn",
+                                        attrs:{type:"success",loading:e.$store.state.loading,disabled:e.$store.state.loading},
+                                        on:{click:e.login}},[
+                                        e._v(e._s(e.$t("login.loginButton"))+"\n      ")])],1),
+                                e._v(" "),s("div",{staticClass:"clear-fix"})],1)],1)},
                 staticRenderFns:[]
             };
         var u=s("VU/8")(i,a,!1,function(e){s("pcrU")},null,null);
