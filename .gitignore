@@ -11,6 +11,7 @@ rel/example_project
 .erlang.mk/
 ct.coverdata
 logs/
+log/
 test/ct.cover.spec
 data/
 .DS_Store
