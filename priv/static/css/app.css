@@ -1,7 +1,7 @@
 *{box-sizing:border-box}
 a{ text-decoration:none;}
 
-.view {flex: 1 1 auto; overflow:hidden;margin:1em;}
+.view {flex: 1 1 auto; margin:1em;}
 .card {display:flex;flex-direction:row;flex-wrap:wrap;}
 .card h4 {text-transform:capitalize;width:100%;margin: 2em 0 0 2em;}
 .card-row {display:flex;flex-direction:column;margin:1em;flex:1 1 45%;}
