@@ -12,6 +12,8 @@ rel/example_project
 ct.coverdata
 logs/
 log/
+*.log
+*.log.*
 test/ct.cover.spec
 data/
 .DS_Store
