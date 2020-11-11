@@ -9,7 +9,8 @@
 % pi
 event(init) ->
     n2o:reg(n2o:sid()),
-    nitro:insert_top(app, nav());
+    nitro:update(nav, nav());
+
 event(E) ->
     case lists:keyfind(E, 1, path()) of
         {Pb,Path} ->
@@ -20,7 +21,16 @@ event(E) ->
             nitro:wire(#jq{target={ps, app, "__vue__.$router"}, method=["push"], args=["{path:'/'}"]})
     end.
 
-nav() -> #nav{class= <<"left-bar">>, body=[
+switch() -> 
+    Base = nitro:f("sessionStorage.setItem('base', JSON.stringify({host: '~s', proto: '~s', mgmt_port: ~p, ws_port: ~p}));", [
+        inet:ntoa(application:get_env(n2o, mqtt_host, {172,16,117,4})),
+        application:get_env(n2o, mqtt_mgmt_proto, "http"),
+        application:get_env(n2o, mqtt_mgmt_port, 8080),
+        application:get_env(n2o, mqtt_ws_port, 8083)]),
+
+    nitro:wire(Base).
+
+nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
     #panel{class= <<"bar-title">>, body=[
         #image{class=logo, src="/app/mq.svg"},
         #h3{body= <<"Панель керування"/utf8>>}

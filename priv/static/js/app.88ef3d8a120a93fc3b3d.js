@@ -177,7 +177,10 @@ webpackJsonp([23],{
                 method:"Method",path:"Path",description:"Description",back:"Back",linkAddress:"Request address",data:"Response data"
             },
             app:{
-                appId:"AppID",secret:"AppSecret",newApp:"New App",viewApp:"View App",
+                appId:"AppID",
+                secret:"AppSecret",
+                newApp:"New App",
+                viewApp:"View App",
                 editApp:"Edit App",create:"Create",errors:"Option Required",name:"AppName",desc:"Remark",expired:"Expired date",
                 status:"Status",
                 enable:"Allowed",
@@ -445,7 +448,7 @@ NHnr:function(e,t,n){
         p={render:function(){
             var e=this.$createElement,
             t=this._self._c||e;
-            return t("div",{attrs:{id:"app", style:"display:flex;flex-direction:row;"}},[t("router-view")],1)
+            return t("div",{attrs:{id:"app"}},[t("router-view")],1)
             },
             staticRenderFns:[]
         };
@@ -696,47 +699,54 @@ cHtD:function(e,t,n){
                         l.default.set(e,"showFeatOnLeftbar",n),
                         localStorage.setItem("showFeatOnLeftbar",c()(n))
                     }),a);
-                    t.a=new u.a.Store({strict:!1,state:b,actions:f,mutations:g})},
-                    rBGa:function(e,t){},
-                    w7XY:function(e,t,n){
-                        "use strict";
-                        var s=n("pFYg"),
-                            a=n.n(s),
-                            o=n("//Fk"),
-                            i=n.n(o),
-                            r=n("woOf"),
-                            c=n.n(r),
-                            l=n("mtWM"),
-                            u=n.n(l),
-                            d=n("Y81h"),
-                            p=n.n(d),
-                            m=n("UVIz"),
-                            h=(n.n(m), n("zL8q")),
-                            b=(n.n(h), n("cHtD")),
-                            f=n("olkN"),
-                            g=n("HL/F"),
-                            _=["zh","en"].includes(localStorage.language) ? localStorage.language:window.EMQX_DASHBOARD_CONFIG.lang||"en",
-                            v=(g.a[_]||g.a.en).httpCode;
-                    p.a.configure({showSpinner:!1}),
-                    c()(u.a.defaults,{
-                        headers:{
-                            "Content-Type":"application/json",
-                            "Cache-Control":"no-cache"
-                        },
-                        baseURL:"http://127.0.0.1:8080/api/v4",
-                        timeout:1e4
-                    });
-                    var S=0;function w(e){
-                        console.error(e),
-                        p.a.done(),
-                        clearTimeout(S),
-                        f.a.dispatch("LOADING",!1);
-                        var t=e.response&&e.response.status;
-                        return e.response&&e.response.data.message&&(e.message=e.response.data.message),
-                            401===t ?
-                                (f.a.dispatch("USER_LOGIN",{isLogOut:!0}),
-                                b.a.push({path:"/login",query:{to:b.a.fullPath}})) :
-                                404===t ?
-                                    e.message="URL Not Found":
-                                    function(e){"module_not_loaded"!==e.message&&h.Message.error(e.message)}(e),i.a.reject(e.message)
-                                }u.a.interceptors.request.use(function(e){return f.a.state.user.username?e.auth={username:f.a.state.user.username,password:f.a.state.user.password}:b.a.push({path:"/login",query:{to:b.a.fullPath}}),p.a.start(),S=setTimeout(function(){f.a.dispatch("LOADING",!0)},100),e},function(e){console.warn("Request Error: ",e),f.a.dispatch("LOADING",!1)}),u.a.interceptors.response.use(function(e){var t={},n="";if("object"===a()(e.data)){var s=e.status,o=e.data,i=o.code,r=o.meta,c=o.message,l=e.data.data;0!==i&&(n=v[i]||c),r&&(l={items:l,meta:r}),t={data:l,status:s}}if(p.a.done(),clearTimeout(S),S=0,f.a.dispatch("LOADING",!1),n){var u=new Error(n);throw w(u),u}return t},w),t.a=u.a}},[0]);
+                    t.a=new u.a.Store({strict:!1,state:b,actions:f,mutations:g})
+},
+rBGa:function(e,t){},
+w7XY:function(e,t,n){
+    "use strict";
+    var b1 = sessionStorage.base || JSON.stringify({proto: "http", host: "127.0.0.1", mgmt_port: 8080}),
+        x1 = JSON.parse(b1),
+        b2 = x1.proto+"://"+x1.host+":"+x1.mgmt_port+"/api/v4";
+
+    console.log("base", b2);
+
+    var s=n("pFYg"),
+        a=n.n(s),
+        o=n("//Fk"),
+        i=n.n(o),
+        r=n("woOf"),
+        c=n.n(r),
+        l=n("mtWM"),
+        u=n.n(l),
+        d=n("Y81h"),
+        p=n.n(d),
+        m=n("UVIz"),
+        h=(n.n(m), n("zL8q")),
+        b=(n.n(h), n("cHtD")),
+        f=n("olkN"),
+        g=n("HL/F"),
+        _=["zh","en"].includes(localStorage.language) ? localStorage.language:window.EMQX_DASHBOARD_CONFIG.lang||"en",
+        v=(g.a[_]||g.a.en).httpCode;
+p.a.configure({showSpinner:!1}),
+c()(u.a.defaults,{
+    headers:{
+        "Content-Type":"application/json",
+        "Cache-Control":"no-cache"
+    },
+    baseURL:b2,
+    timeout:1e4
+});
+var S=0;function w(e){
+    console.error(e),
+    p.a.done(),
+    clearTimeout(S),
+    f.a.dispatch("LOADING",!1);
+    var t=e.response&&e.response.status;
+    return e.response&&e.response.data.message&&(e.message=e.response.data.message),
+        401===t ?
+            (f.a.dispatch("USER_LOGIN",{isLogOut:!0}),
+            b.a.push({path:"/login",query:{to:b.a.fullPath}})) :
+            404===t ?
+                e.message="URL Not Found":
+                function(e){"module_not_loaded"!==e.message&&h.Message.error(e.message)}(e),i.a.reject(e.message)
+            }u.a.interceptors.request.use(function(e){return f.a.state.user.username?e.auth={username:f.a.state.user.username,password:f.a.state.user.password}:b.a.push({path:"/login",query:{to:b.a.fullPath}}),p.a.start(),S=setTimeout(function(){f.a.dispatch("LOADING",!0)},100),e},function(e){console.warn("Request Error: ",e),f.a.dispatch("LOADING",!1)}),u.a.interceptors.response.use(function(e){var t={},n="";if("object"===a()(e.data)){var s=e.status,o=e.data,i=o.code,r=o.meta,c=o.message,l=e.data.data;0!==i&&(n=v[i]||c),r&&(l={items:l,meta:r}),t={data:l,status:s}}if(p.a.done(),clearTimeout(S),S=0,f.a.dispatch("LOADING",!1),n){var u=new Error(n);throw w(u),u}return t},w),t.a=u.a}},[0]);
