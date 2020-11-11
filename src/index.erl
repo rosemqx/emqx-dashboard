@@ -45,9 +45,9 @@ nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
     #link{id=rules,         body= <<"Правила"/utf8>>,   postback=rules},
     #link{id=resources,     body= <<"Ресурси"/utf8>>,   postback=resources},
     #link{id=settings,      body= <<"Налаштування"/utf8>>, postback=settings},
-    #link{id=users,         body= <<"користувачі"/utf8>>, postback=users},
+    #link{id=users,         body= <<"Користувачі"/utf8>>, postback=users},
     #link{id=modules,       body= <<"Модулі"/utf8>>,    postback=modules},
-    #link{id=help,          body= <<"допомога"/utf8>>,  postback=help},
+    #link{id=help,          body= <<"Допомога"/utf8>>,  postback=help},
 
     #panel{class= <<"bar-footer">>, body=[
         #span{body=n2o:user()},
