@@ -58,6 +58,7 @@ webpackJsonp([23],{
                     copyFailed:"Copy failed",generate:"Generate",search:"Search",reset:"Reset",next:"Next",prev:"Previous"
             },
             leftbar:{
+                topics: "Topics",
                 websocket: "Websocket",
                 overview:"Overview",
                 connections:"Connections",
@@ -275,6 +276,7 @@ webpackJsonp([23],{
     warning:"警告",subscribe:"订阅",unsubscribe:"取消订阅",unsubscribeConfirm:"此操作将取消订阅该主题",pleaseEnter:"请输入",
     copy:"复制",copySuccess:"复制成功",copyFailed:"复制失败",generate:"生成",search:"搜索",reset:"重置",next:"下一页",prev:"上一页"},
     leftbar:{
+        topics: "Теми",
         websocket: "Websocket",
         overview:"Огляд",
         connections:"З'єднання",
