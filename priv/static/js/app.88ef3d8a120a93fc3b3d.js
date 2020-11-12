@@ -16,7 +16,6 @@ webpackJsonp([23],{
         },
         dependencies:{
             axios:"^0.19.0",
-            clipboard:"^2.0.6",
             codemirror:"^5.48.0",
             dateformat:"^3.0.3","element-ui":"^2.11.1","js-sql-parser":"^1.2.1",
             jsonlint:"^1.6.3",
@@ -113,8 +112,12 @@ webpackJsonp([23],{
                 session:"Session",max:"Maximum",historicHigh:"Historic High of",subscriptions:"Subscriptions Count",
                 inflight:"Inflight Window Size",mqueue:"Message Queue Size",awaiting_rel:"Unconfirmed PUBREC Packets Count",
                 recv_cnt_desc:"Number of TCP Packets Received",recv_msg_desc:"Number of PUBLISH Packets Received",
-                recv_oct_desc:"Number of Bytes Received",recv_pkt_desc:"Number of MQTT Packets Received",send_cnt_desc:"Number of TCP Packets Sent",send_msg_desc:"Number of PUBLISH Packets Sent",
-                send_oct_desc:"Number of Bytes Sent",send_pkt_desc:"Number of MQTT Packets Sent",
+                recv_oct_desc:"Number of Bytes Received",
+                recv_pkt_desc:"Number of MQTT Packets Received",
+                send_cnt_desc:"Number of TCP Packets Sent",
+                send_msg_desc:"Number of PUBLISH Packets Sent",
+                send_oct_desc:"Number of Bytes Sent",
+                send_pkt_desc:"Number of MQTT Packets Sent",
                 currentSubs:"Subscriptions Count",addSubs:"Add Subscription",view:"View",disconnected:"Disconnected",
                 kickOut:"Kick Out"
             },
