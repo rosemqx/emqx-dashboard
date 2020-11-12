@@ -44,7 +44,6 @@ nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
     #link{id=http,          body= <<"HTTP APi"/utf8>>,  postback=http},
     #link{id=settings,      body= <<"Налаштування"/utf8>>, postback=settings},
     #link{id=users,         body= <<"Користувачі"/utf8>>, postback=users},
-    #link{id=modules,       body= <<"Модулі"/utf8>>,    postback=modules},
     #link{id=help,          body= <<"Допомога"/utf8>>,  postback=help},
 
     #panel{class= <<"bar-footer">>, body=[
@@ -55,8 +54,7 @@ nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
 
 path() -> [
     {overview,"/"}, {clients,"/clients"}, {topics,"/topics"},
-    {subscriptions,"/subscriptions"},
-    {modules,"/modules"}, {listeners,"/listeners"},
+    {subscriptions,"/subscriptions"}, {listeners,"/listeners"},
     {websocket,"/websocket"}, {http,"/http_api"},
     {settings,"/settings"}, {users,"/users"},  {help,"/help"}].
 
