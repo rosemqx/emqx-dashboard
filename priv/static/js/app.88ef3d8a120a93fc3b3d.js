@@ -639,9 +639,6 @@ cHtD:function(e,t,n){
                 {path:"/clients/:id",name:"clientDetails",component:function(){return Promise.all([n.e(0),n.e(8)]).then(n.bind(null,"8AHC"))}},
                 {path:"/topics",name:"topics",component:function(){return n.e(1).then(n.bind(null,"zXyA"))}},
                 {path:"/subscriptions",name:"subscriptions",component:function(){return n.e(1).then(n.bind(null,"zXyA"))}},
-                {path:"/rules",name:"rules",component:function(){return Promise.all([n.e(0),n.e(13)]).then(n.bind(null,"IvP6"))}},
-                {path:"/rules/create",name:"ruleCreate",component:function(){return Promise.all([n.e(3),n.e(0)]).then(n.bind(null,"nFS+"))}},
-                {path:"/rules/:id",name:"ruleDetails",component:function(){return Promise.all([n.e(0),n.e(14)]).then(n.bind(null,"JWuK"))}},
                 {path:"/modules",name:"modules",component:function(){return n.e(6).then(n.bind(null,"fnGs"))}},
                 {path:"/listeners",name:"listeners",component:function(){return n.e(19).then(n.bind(null,"uuOo"))}},
                 {path:"/websocket",name:"websocket",component:function(){
