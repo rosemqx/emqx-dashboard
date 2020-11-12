@@ -151,12 +151,6 @@ body{display: flex; flex-direction: row;}
 .settings-view .el-card{margin-top:24px}
 .settings-view .el-switch.is-checked .el-switch__core{background-color:#42d885;border-color:#42d885}
 .settings-view .confirm-btn .el-form-item{margin-bottom:4px!important}
-.help-view .help-item h3{font-size:16px}
-.help-view .help-item p{color:#b0b0b0;line-height:1.8}
-.help-view .help-item a{margin-right:16px}
-.help-view .help-item .follow-link{display:inline-block;width:64px;height:52px;text-align:center;line-height:52px;background:#232429;color:#9ea3b1;margin-bottom:20px}
-.help-view .el-divider{margin:30px 0;background-color:#2b2c30}
-@media (max-width:996px){.help-view{width:100%}}
 .not-found{text-align:center;padding:50px}
 .not-found p{margin-top:30px;font-size:20px}.not-found a{margin-right:20px}.not-found a:hover{text-decoration:underline}
 [class*=" el-icon-"],[class^=el-icon-]{font-family:element-icons!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;vertical-align:baseline;display:inline-block;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}

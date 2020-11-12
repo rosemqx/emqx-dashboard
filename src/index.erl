@@ -44,11 +44,10 @@ nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
     #link{id=http,          body= <<"HTTP APi"/utf8>>,  postback=http},
     #link{id=settings,      body= <<"Налаштування"/utf8>>, postback=settings},
     #link{id=users,         body= <<"Користувачі"/utf8>>, postback=users},
-    #link{id=help,          body= <<"Допомога"/utf8>>,  postback=help},
 
     #panel{class= <<"bar-footer">>, body=[
         #span{body=n2o:user()},
-        #link{body=[#image{src= <<"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABsklEQVRoQ+2ZwVHDMBBF/6oB6IBwCRxNJeCkAdGBXQl0gCggASrB3DC5OBVgrjlkGTOByciJbEcyyIxytbTat/9LlrOEgf9o4PkjAPy1gjsVOH+Qo/UaN0SIAIwcJ1kwIxMC6WusCtvYNYCv5BnPBBzbBjfNZ6AUhAtbiBrAeC4fCbjsM/nv2Aw8vU3Ulc1auwDe+67+VsJFPlGnTgHO5pK3A+YT5fSkch2/lpzrBfTquo4fALr6NyigVSxYKFjI8pj+dQt1VaxpfABoqlDX5+OZvFsJpEWsyjZzvVOgek8wkDHhehGrrAnCS4Aq6eq6zYx0MVXKBOEtwM+Vm6FMlrIG0K8GTZIf8txkqUEAmCw1HADGBwOJvicGAcDACxPkrlPJGuAQT5vm6HuKgfsVIdn3XvAWgPdYRof3EsBkGe8BxnOpTJbxHqDrnvLOQt4DhI/68FHf1aTa+GChYKFgIbd/39cbHDNZEuHIstDtpjOW+VRZ9eD+X4tp06HM+lahui4Lgch5k6/SftOpvCVGBMJJOz+0HMVYMiEThMQ2+WpFp/2vlghOhwUAp+U8INjgFfgEg1piQESWU5UAAAAASUVORK5CYII=">> }]}
+        #link{body= <<"вихід"/utf8>>}
     ]}
 ]}.
 
@@ -56,7 +55,7 @@ path() -> [
     {overview,"/"}, {clients,"/clients"}, {topics,"/topics"},
     {subscriptions,"/subscriptions"}, {listeners,"/listeners"},
     {websocket,"/websocket"}, {http,"/http_api"},
-    {settings,"/settings"}, {users,"/users"},  {help,"/help"}].
+    {settings,"/settings"}, {users,"/users"} ].
 
 ws() -> #panel{class=card, body=[
     % on enter
