@@ -66,7 +66,8 @@ webpackJsonp([23],{
                 management:"Management",
                 instances:"Instances",
                 admin:"Admin",
-                settings: "Settings"
+                settings: "Settings",
+                listeners: "Listeners"
             },
             overview:{
                 broker:"Broker",
@@ -284,8 +285,9 @@ webpackJsonp([23],{
         sessions:"Сесії",
         management:"Управління",
         instances:"服务",
-        admin:"Адміністратор"
-        settings: "Налаштування"
+        admin:"Адміністратор",
+        settings: "Налаштування",
+        listeners: "Слухачі"
     },
     overview:{
         broker:"系统信息",
