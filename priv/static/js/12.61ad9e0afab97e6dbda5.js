@@ -1,9 +1,16 @@
-webpackJsonp([12],{SFPK:function(t,e){},VKKr:function(t,e,s){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var o=s("mvHQ"),a=s.n(o),i=s("zL8q"),n=s("VOAv"),l={name:"settings-view",components:{"el-radio":i.Radio,"el-radio-group":i.RadioGroup,"el-button":i.Button,"el-form":i.Form,"el-form-item":i.FormItem,"el-row":i.Row,"el-col":i.Col,"el-card":i.Card},data:function(){return{options:{themes:"",language:""},defaultConfig:"",defaultThemes:"",defaultLanguage:""}},computed:{notChanged:function(){return this.defaultConfig===a()(this.options)}},methods:{
-    init:function(){
-        var t="light-themes";
-        this.options.themes=t,
-        this.defaultThemes=t,
-        this.options.language=window.localStorage.getItem("language")||"en",this.options.language="zh"===this.options.language?"zh":"en",this.defaultLanguage=this.options.language,this.defaultConfig=a()(this.options)},themesToggle:function(){Object(n.b)(this.options.themes)},applySetting:function(){this.$message.success(this.$t("settings.success")),this.themesToggle(),this.defaultThemes=this.options.themes,window.localStorage.setItem("language",this.options.language),window.localStorage.setItem("themes",this.options.themes),this.defaultLanguage!==this.options.language&&setTimeout(function(){location.reload()},600),this.defaultConfig=a()(this.options)}},created:function(){this.init()},beforeRouteLeave:function(t,e,s){this.defaultThemes!==this.options.themes&&Object(n.b)(this.defaultThemes),s()}},r={render:function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"settings-view"},[s("div",{staticClass:"page-title"},[t._v(t._s(t.$t("leftbar.settings")))]),t._v(" "),s("el-card",{staticClass:"el-card--self"},[s("el-row",{attrs:{gutter:20}},[
+webpackJsonp([12],{SFPK:function(t,e){},VKKr:function(t,e,s){
+    "use strict";
+    Object.defineProperty(e,"__esModule",{value:!0});
+    var o=s("mvHQ"),a=s.n(o),i=s("zL8q"),n=s("VOAv"),
+        l={ name:"settings-view",
+            components:{"el-radio":i.Radio,"el-radio-group":i.RadioGroup,"el-button":i.Button,"el-form":i.Form,"el-form-item":i.FormItem,"el-row":i.Row,"el-col":i.Col,"el-card":i.Card},
+            data:function(){return{options:{themes:"",language:""},defaultConfig:"",defaultThemes:"",defaultLanguage:""}},
+            computed:{notChanged:function(){return this.defaultConfig===a()(this.options)}},
+            methods:{ init:function(){
+                var t="light-themes";
+                this.options.themes=t,
+                this.defaultThemes=t,
+                this.options.language=window.localStorage.getItem("language")||"en",this.options.language="zh"===this.options.language?"zh":"en",this.defaultLanguage=this.options.language,this.defaultConfig=a()(this.options)},themesToggle:function(){Object(n.b)(this.options.themes)},applySetting:function(){this.$message.success(this.$t("settings.success")),this.themesToggle(),this.defaultThemes=this.options.themes,window.localStorage.setItem("language",this.options.language),window.localStorage.setItem("themes",this.options.themes),this.defaultLanguage!==this.options.language&&setTimeout(function(){location.reload()},600),this.defaultConfig=a()(this.options)}},created:function(){this.init()},beforeRouteLeave:function(t,e,s){this.defaultThemes!==this.options.themes&&Object(n.b)(this.defaultThemes),s()}},r={render:function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"settings-view"},[s("div",{staticClass:"page-title"},[t._v(t._s(t.$t("leftbar.settings")))]),t._v(" "),s("el-card",{staticClass:"el-card--self"},[s("el-row",{attrs:{gutter:20}},[
             s("el-form",
                 {ref:"options",attrs:{model:t.options,"label-width":"100px","label-position":"top"}},[
                     s("el-col",{attrs:{span:12}},[],1),
