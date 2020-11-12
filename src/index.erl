@@ -43,7 +43,6 @@ nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
     #link{id=websocket,     body= <<"Websocket"/utf8>>, postback=websocket},
     #link{id=http,          body= <<"HTTP APi"/utf8>>,  postback=http},
     #link{id=rules,         body= <<"Правила"/utf8>>,   postback=rules},
-    #link{id=resources,     body= <<"Ресурси"/utf8>>,   postback=resources},
     #link{id=settings,      body= <<"Налаштування"/utf8>>, postback=settings},
     #link{id=users,         body= <<"Користувачі"/utf8>>, postback=users},
     #link{id=modules,       body= <<"Модулі"/utf8>>,    postback=modules},
@@ -57,7 +56,7 @@ nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
 
 path() -> [
     {overview,"/"}, {clients,"/clients"}, {topics,"/topics"},
-    {subscriptions,"/subscriptions"}, {rules,"/rules"}, {resources,"/resources"},
+    {subscriptions,"/subscriptions"}, {rules,"/rules"},
     {modules,"/modules"}, {listeners,"/listeners"},
     {websocket,"/websocket"}, {http,"/http_api"},
     {settings,"/settings"}, {users,"/users"},  {help,"/help"}].

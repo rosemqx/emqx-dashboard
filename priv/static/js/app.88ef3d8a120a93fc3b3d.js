@@ -65,7 +65,8 @@ webpackJsonp([23],{
                 sessions:"Sessions",
                 management:"Management",
                 instances:"Instances",
-                admin:"Admin"
+                admin:"Admin",
+                settings: "Settings"
             },
             overview:{
                 broker:"Broker",
@@ -284,6 +285,7 @@ webpackJsonp([23],{
         management:"Управління",
         instances:"服务",
         admin:"Адміністратор"
+        settings: "Налаштування"
     },
     overview:{
         broker:"系统信息",
@@ -640,7 +642,6 @@ cHtD:function(e,t,n){
                 {path:"/rules",name:"rules",component:function(){return Promise.all([n.e(0),n.e(13)]).then(n.bind(null,"IvP6"))}},
                 {path:"/rules/create",name:"ruleCreate",component:function(){return Promise.all([n.e(3),n.e(0)]).then(n.bind(null,"nFS+"))}},
                 {path:"/rules/:id",name:"ruleDetails",component:function(){return Promise.all([n.e(0),n.e(14)]).then(n.bind(null,"JWuK"))}},
-                {path:"/resources",name:"resources",component:function(){return Promise.all([n.e(0),n.e(15)]).then(n.bind(null,"xPbZ"))}},
                 {path:"/modules",name:"modules",component:function(){return n.e(6).then(n.bind(null,"fnGs"))}},
                 {path:"/listeners",name:"listeners",component:function(){return n.e(19).then(n.bind(null,"uuOo"))}},
                 {path:"/websocket",name:"websocket",component:function(){

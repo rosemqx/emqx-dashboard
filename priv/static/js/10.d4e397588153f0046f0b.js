@@ -21,8 +21,12 @@ webpackJsonp([10],{
             (e.$message.error(e.$t("users.authenticate")),
              e.USER_LOGIN({isLogOut:!0}),
              e.$router.push("/login")) : 
-                (e.$message.success(""+e.$t("oper.edit")+e.$t("alert.success")),e.dialogVisible=!1,e.loadData())}).catch(function(s){e.$message.error(s||e.$t("error.networkError"))})})}
-                else e.$httpPut("/users/"+e.record.username,e.record).then(function(){e.$message.success(""+e.$t("oper.edit")+e.$t("alert.success")),e.dialogVisible=!1,e.loadData()}).catch(function(s){e.$message.error(s||e.$t("error.networkError"))})})},deleteUser:function(e,s,r){var t=this;this.$httpDelete("/users/"+e.username).then(function(){t.$message.success(""+t.$t("oper.delete")+t.$t("alert.success")),t.loadData(),r.$refs["popover-"+s].doClose()}).catch(function(e){t.$message.error(e||t.$t("error.networkError"))})}}),created:function(){this.loadData()}},l={render:function(){var e=this,s=e.$createElement,r=e._self._c||s;
+                (e.$message.success(""+e.$t("oper.edit")+e.$t("alert.success")),e.dialogVisible=!1,e.loadData())})
+                .catch(function(s){e.$message.error(s||e.$t("error.networkError"))})})}
+                else e.$httpPut("/users/"+e.record.username,e.record)
+                        .then(function(){e.$message.success(""+e.$t("oper.edit")+e.$t("alert.success")),e.dialogVisible=!1,e.loadData()})
+                        .catch(function(s){e.$message.error(s||e.$t("error.networkError"))})})},
+            deleteUser:function(e,s,r){var t=this;this.$httpDelete("/users/"+e.username).then(function(){t.$message.success(""+t.$t("oper.delete")+t.$t("alert.success")),t.loadData(),r.$refs["popover-"+s].doClose()}).catch(function(e){t.$message.error(e||t.$t("error.networkError"))})}}),created:function(){this.loadData()}},l={render:function(){var e=this,s=e.$createElement,r=e._self._c||s;
         return r("div",{staticClass:"users-view"},[
             r("div",{staticClass:"page-title"},[
                 e._v("\n    "+e._s(e.$t("leftbar.users"))+"\n    "),
