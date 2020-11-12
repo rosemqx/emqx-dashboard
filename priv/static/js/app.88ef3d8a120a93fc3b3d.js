@@ -647,7 +647,6 @@ cHtD:function(e,t,n){
                     return Promise.all([n.e(4),n.e(0)]).then(n.bind(null,"EzHP"))
                 }},
                 {path:"/http_api",name:"http_api",component:function(){return n.e(9).then(n.bind(null,"qB/b"))}},
-                {path:"/applications",name:"applications",component:function(){return n.e(21).then(n.bind(null,"Tk0c"))}},
                 {path:"/users",name:"users",component:function(){return n.e(10).then(n.bind(null,"QSR2"))}},
                 {path:"/settings",name:"settings",component:function(){return n.e(12).then(n.bind(null,"VKKr"))}},
                 {path:"/help",name:"help",component:function(){return n.e(20).then(n.bind(null,"LbE0"))}}
