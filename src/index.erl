@@ -25,14 +25,14 @@ switch() ->
     Base = nitro:f("sessionStorage.setItem('base', JSON.stringify({host: '~s', proto: '~s', mgmt_port: ~p, ws_port: ~p}));", [
         inet:ntoa(application:get_env(n2o, mqtt_host, {172,16,117,4})),
         application:get_env(n2o, mqtt_mgmt_proto, "http"),
-        application:get_env(n2o, mqtt_mgmt_port, 8080),
+        application:get_env(n2o, mqtt_mgmt_port, 8081),
         application:get_env(n2o, mqtt_ws_port, 8083)]),
 
     nitro:wire(Base).
 
 nav() -> #nav{id=nav, class= <<"left-bar">>, body=[
     #panel{class= <<"bar-title">>, body=[
-        #image{class=logo, src="/app/mq.svg"},
+        #image{class=logo, src="/mq.svg"},
         #h3{body= <<"Панель керування"/utf8>>}
     ]},
     #link{id=overview,      body= <<"Огляд"/utf8>>,     postback=overview},
