@@ -19,7 +19,8 @@ webpackJsonp([9],{
             l={
                 name:"http-api",
                 components:{"el-button":i.Button,"el-table":i.Table,"el-table-column":i.TableColumn,"el-card":i.Card},
-                data:function(){return{popoverVisible:!1,nodeName:"emqx@127.0.0.1",tableData:[],nodes:[],responseDate:null,scrollTop:0,uri:""}},
+                data:function(){
+                    return{popoverVisible:!1,nodeName:"emqx@127.0.0.1",tableData:[],nodes:[],responseDate:null,scrollTop:0,uri:""}},
                 computed:{jsonFormatter:function(){var t=o()(this.responseDate,null,"\t");return t=(t=t.replace(/\n/g,"<br />")).replace(/\t/g,"&nbsp;&nbsp;&nbsp;&nbsp;")}
                 },
                 watch:{nodeInfo:"setApiData"},

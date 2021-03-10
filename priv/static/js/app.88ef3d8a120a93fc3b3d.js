@@ -45,7 +45,13 @@ webpackJsonp([23],{
                 confirmDelete:"Confirm Delete ?",confirmStop:"Confirm Stop?",
                 cancel:"Cancel",confirm:"Confirm",delete:"Delete",oper:"Operation",edit:"Edit",save:"Save",
                 create:"Create",view:"View",viewMore:"View More",expand:"Expand",collapse:"Collapse",refresh:"Refresh",add:"Add",
-                addSuccess:"Add Success",editSuccess:"Edit success",startSuccess:"Start Success",stopSuccess:"Stop Success",enableSuccess:"Enable Success",disabledSuccess:"Disable Success",deleteSuccess:"Delete Success",disconnectSuccess:"Disconnect Success",from:"From",stop:"Stop",start:"Start",
+                addSuccess:"Add Success",
+                editSuccess:"Edit success",
+                startSuccess:"Start Success",
+                stopSuccess:"Stop Success",
+                enableSuccess:"Enable Success",
+                disabledSuccess:"Disable Success",
+                deleteSuccess:"Delete Success",disconnectSuccess:"Disconnect Success",from:"From",stop:"Stop",start:"Start",
                     notice:"Notice",
                     confirmDisconnect:"Confirm disconnect?",
                     confirmKickOut:"Confirm kick out?",
@@ -92,7 +98,13 @@ webpackJsonp([23],{
                 sessionsCount:"Sessions",
                 sessionsMax:"Max",
                 subscribersCount:"Subscribers",
-                subscribersMax:"Max",subscriptionsCount:"Subscriptions",subscriptionsMax:"Max",subscriptionsSharedCount:"Subscriptions Shared",subscriptionsSharedMax:"Max",metrics:"Metrics",packetsData:"The packets data",messagesData:"The messages data",bytesData:"The bytes data",
+                subscribersMax:"Max",subscriptionsCount:"Subscriptions",
+                subscriptionsMax:"Max",
+                subscriptionsSharedCount:"Subscriptions Shared",
+                subscriptionsSharedMax:"Max",metrics:"Metrics",
+                packetsData:"The packets data",
+                messagesData:"The messages data",
+                bytesData:"The bytes data",
                 session:"Session",client:"Client",delivery:"Delivery"
             },
             clients:{
@@ -243,21 +255,6 @@ webpackJsonp([23],{
                 importSuccess:"Import success",
                 notice:"Use backup configuration files to configure initialization modification. <br/> Notice: configuration files may contain important data, such as database address and authentication information. Please keep good configuration files and use backup function reasonably."
             },
-            help:{
-                quickStart:"Quick start",
-                emqxDesc:"EMQ X is a MQTT broker developed on the Erlang/OTP platform, which is the most popular MQTT message middleware in the open source community. It supports common IoT protocols, including MQTT, LwM2M, MQTT-SN, CoAP, LoRaWAN, HTTP, and WebSocket. Welcome to follow our project or participate in development.",
-                useDocs:"Documentation",
-                docsDesc:"We have prepared a comprehensive documentation to help you familiarize yourself with more powerful features.",
-                forwardView:"View documentation"    
-            },
-            analysis:{
-                topicMetrics:"Topic metrics",metricsTip:"(The metrics are real-time refresh data, including all statistics since the addition)",messageIn:"Message In",messageOut:"Message Out",messageDrop:"Message Drop",addTopic:"Add Topic",details:"Details",all:"All",rateItem:"{0} / second",rate:"(rate)",
-                messageInDesc:"(message in rate)",
-                messageOutDesc:"(message out rate)",
-                messageDropDesc:"(message drop rate)",
-                loadAnalysis:"Load",
-                loadSuccess:"Load Success"
-            },
             httpCode:{
                 0:"Success",101:"Bad RPC",102:"Unknown Error",103:"Username or password error",104:"Empty username or password",105:"User does not exist",106:"Admin can not be deleted",107:"Missing request parameter",108:"Request parameter type error",109:"Request parameter is not a json",
                 110:"Plugin has been loaded",111:"Plugin has been unloaded",112:"Client not online",
@@ -318,14 +315,20 @@ webpackJsonp([23],{
             ipAddr:"IP 地址",
             port:"Порт",
             cleanStart:"清除会话",keepalive:"心跳（秒）",back:"返回",subscriptionsCount:"当前订阅数量",expiryInterval:"会话过期间隔（秒）",maxInflight:"最大拥塞",inflightLen:"当前拥塞",mqueueLen:"当前缓存消息",mqueueDropped:"丢弃消息",awaitingRelLen:"等待释放",deliverMsg:"投递消息",enqueueMsg:"入队消息",createdAt:"会话创建时间",connectedAt:"连接时间",connected:"连接状态",clientsDetails:"详情",basicInfo:"基础信息",subsInfo:"订阅列表",protoVer:"协议版本",protoName:"协议名称",protoType:"协议类型",connectInfo:"连接信息",isBridge:"是否为桥接",disconnectAt:"断开连接时间",session:"会话信息",max:"最大",subscriptions:"订阅数量",inflight:"飞行窗口",mqueue:"消息队列",awaiting_rel:"未确认的 PUBREC 数据包计数",recv_cnt_desc:"接收的 TCP 报文数量",recv_msg_desc:"接收的 PUBLISH 报文数量",recv_oct_desc:"接收的字节数量",recv_pkt_desc:"接收的 MQTT 报文数量",send_cnt_desc:"发送的 TCP 报文数量",send_msg_desc:"发送的 PUBLISH 报文数量",send_oct_desc:"发送的字节数量",
-        send_pkt_desc:"发送的 MQTT 报文数量",currentSubs:"当前订阅数",addSubs:"添加订阅",view:"详情",disconnected:"已断开",kickOut:"踢除"},topics:{topic:"主题",node:"节点"},subscriptions:{clientId:"客户端 ID",topic:"主题",qoS:"QoS",share:"共享订阅"},plugins:{name:"插件名称",version:"版本",description:"描述",status:"状态",stopped:"已停止",running:"运行中",start:"启动",stop:"停止",config:"配置",manage:"管理",tutorial:"使用文档",back:"返回",advancedConfig:"高级配置",add:"新增",configSuccess:"配置成功",configFailure:"配置失败",notice:"你确定提交这些配置吗？重启插件后生效",giveUpNotice:"你确定放弃应用已更改的配置吗？",noticeTitle:"注意",cacheNotice:"已放弃操作",emptyConfigOption:"默认配置项为空",searchByName:"按插件名称搜索",
-        usernameRequired:"请填写 username",
-        passwordRequired:"请填写 password",
-        clientidRequired:"请填写 Client ID",algorithm:"加密算法",secret:"密钥或私钥",payloadDesc:"启用 verify_claims 时有效, 可以使用 %u，%c 占位符分别替换输入的 username 和 clientid，详见",jwtDoc:"JWT 认证",dataDesc:"一行一组数据，使用逗号分割 username,clientid",secretRequired:"请输入 Secret",payloadRequired:"请输入 Payload 模版",dataRequired:"请填写 Payload 数据",leaveTokenPage:"离开页面后当前输入的配置与生成的 TOKEN 信息均不再保留，确认离开？"},modules:{name:"模块名称",enable:"启用",disable:"停用",enabled:"已启用",disabled:"已停用"},instances:{instances:"服务",back:"返回",info:"基本信息",name:"实例名称",descr:"备注信息",service:"所属服务",configInfo:"配置信息",initConfig:"初始化配置或",remarkConfig:"请输入备注信息",createInstance:"新建服务",selectServiceType:"选择实例类型",all:"全部",running:"运行中",stopped:"已停止",auth:"认证",backend:"持久化",hook:"回调钩子",bridge:"数据桥接",other:"其他",select:"选择",selected:"已选择",nextStep:"下一步",authDesc:"提供登录认证与发布订阅 ACL 服务。",backendDesc:"提供消息持久化到数据库服务。",bridgeDesc:"提供将消息流桥接为消息中间件数据源服务。",hookDesc:"使用触发回调机制响应操作的服务。",otherDesc:"系统运行信息等其他服务。"},listeners:{protocol:"协议",listenOn:"监听地址",maxConnections:"最大连接数",currentConnections:"当前连接数"},
-        websocket:{connect:"连接",host:"主机地址",port:"Порт",clientID:"客户端 ID",username:"用户名",password:"密码",keepAlive:"心跳（秒）",cleanSession:"清除会话",disconnect:"断开连接",currentState:"当前状态",subscribe:"订阅",topic:"主题",qoS:"服务质量",date:"订阅时间",oper:"操作",messages:"消息",retained:"保留",send:"发送",messagesAlreadySent:"发布消息列表",messagesReceived:"订阅消息列表",time:"时间",connectError:"消息发送错误",connectFailure:"连接失败",connectLeave:"尚未连接到服务器",subscribeSuccess:"订阅成功",subscribeFailure:"订阅失败",messageSendOut:"消息已发出",connected:"已连接",connecting:"正在连接",disconnected:"未连接",
+            send_pkt_desc:"发送的 MQTT 报文数量",currentSubs:"当前订阅数",addSubs:"添加订阅",view:"详情",disconnected:"已断开",kickOut:"踢除"},topics:{topic:"主题",node:"节点"},subscriptions:{clientId:"客户端 ID",topic:"主题",qoS:"QoS",share:"共享订阅"},plugins:{name:"插件名称",version:"版本",description:"描述",status:"状态",stopped:"已停止",running:"运行中",start:"启动",stop:"停止",config:"配置",manage:"管理",tutorial:"使用文档",back:"返回",advancedConfig:"高级配置",add:"新增",configSuccess:"配置成功",configFailure:"配置失败",notice:"你确定提交这些配置吗？重启插件后生效",giveUpNotice:"你确定放弃应用已更改的配置吗？",noticeTitle:"注意",cacheNotice:"已放弃操作",emptyConfigOption:"默认配置项为空",searchByName:"按插件名称搜索",
+            usernameRequired:"请填写 username",
+            passwordRequired:"请填写 password",
+            clientidRequired:"请填写 Client ID",algorithm:"加密算法",secret:"密钥或私钥",payloadDesc:"启用 verify_claims 时有效, 可以使用 %u，%c 占位符分别替换输入的 username 和 clientid，详见",jwtDoc:"JWT 认证",dataDesc:"一行一组数据，使用逗号分割 username,clientid",secretRequired:"请输入 Secret",payloadRequired:"请输入 Payload 模版",dataRequired:"请填写 Payload 数据",leaveTokenPage:"离开页面后当前输入的配置与生成的 TOKEN 信息均不再保留，确认离开？"},modules:{name:"模块名称",enable:"启用",disable:"停用",enabled:"已启用",disabled:"已停用"},instances:{instances:"服务",back:"返回",info:"基本信息",name:"实例名称",descr:"备注信息",service:"所属服务",configInfo:"配置信息",initConfig:"初始化配置或",remarkConfig:"请输入备注信息",createInstance:"新建服务",selectServiceType:"选择实例类型",all:"全部",running:"运行中",stopped:"已停止",auth:"认证",backend:"持久化",hook:"回调钩子",bridge:"数据桥接",other:"其他",select:"选择",selected:"已选择",nextStep:"下一步",authDesc:"提供登录认证与发布订阅 ACL 服务。",backendDesc:"提供消息持久化到数据库服务。",bridgeDesc:"提供将消息流桥接为消息中间件数据源服务。",hookDesc:"使用触发回调机制响应操作的服务。",otherDesc:"系统运行信息等其他服务。"},listeners:{protocol:"协议",listenOn:"监听地址",maxConnections:"最大连接数",currentConnections:"当前连接数"},
+        websocket:{
+            connect:"连接",
+            host:"主机地址",
+            port:"Порт",
+            clientID:"客户端 ID",username:"用户名",password:"密码",keepAlive:"心跳（秒）",cleanSession:"清除会话",disconnect:"断开连接",currentState:"当前状态",subscribe:"订阅",topic:"主题",qoS:"服务质量",date:"订阅时间",oper:"操作",messages:"消息",retained:"保留",send:"发送",messagesAlreadySent:"发布消息列表",messagesReceived:"订阅消息列表",time:"时间",connectError:"消息发送错误",connectFailure:"连接失败",connectLeave:"尚未连接到服务器",subscribeSuccess:"订阅成功",subscribeFailure:"订阅失败",messageSendOut:"消息已发出",connected:"已连接",connecting:"正在连接",disconnected:"未连接",
             notSupport:"你的浏览器暂不支持WebSocket"
         },
-        httpApi:{introduction:"说明",desc:"除了帮助页面，所有URI返回application/json格式的的资源，每个请求都需要HTTP基本认证。默认用户是admin / public。<br/>emqx_dashboard插件提供了一个Web管理控制台, 用于监控服务器的运行状态，数据统计和MQTT包计数监控。",reference:"参考",method:"请求方法",path:"路径",description:"描述",back:"返回",linkAddress:"请求地址",data:"响应数据"},app:{appId:"AppID",secret:"App密钥",newApp:"新建APP",viewApp:"查看App",editApp:" 编辑App",errors:"该项为必填项",name:"App名称",desc:"备注",expired:"到期日期",status:"状态",enable:"允许访问",disable:"拒绝访问",enableText:"允许访问",disableText:"拒绝访问",expiredText:"永不过期",guide:"应用用于 EMQ X 管理监控 API (REST API) 连接认证，详见",docs:"文档"},users:{newUser:"新建用户",editUser:"编辑用户",username:"用户名",remark:"备注",password:"密码",confirmPassword:"确认密码",oldPassword:"旧密码",newPassword:"新密码",confirmNewPassword:"确认新密码",changePassword:"修改密码",dontChangePassword:"不修改密码",usernameRequired:"请填写用户名",remarkRequired:"请填写备注",usernameIllegal:"用户名长度: 3~32",passwordRequired:"请填写密码",newPasswordRequired:"请填写新密码",passwordInconsistent:"密码不一致",authenticate:"你已成功修改已登录用户密码，请重新登录",createUser:"新建用户成功",passwordIllegal:"密码长度: 3~255"},alert:{required:"字段是必填项",success:"成功",failure:"失败",connect:"连接"},
+        httpApi:{
+            introduction:"说明",
+            desc:"除了帮助页面，所有URI返回application/json格式的的资源，每个请求都需要HTTP基本认证。默认用户是admin / public。<br/>emqx_dashboard插件提供了一个Web管理控制台, 用于监控服务器的运行状态，数据统计和MQTT包计数监控。",reference:"参考",method:"请求方法",path:"路径",description:"描述",back:"返回",linkAddress:"请求地址",data:"响应数据"},app:{appId:"AppID",secret:"App密钥",newApp:"新建APP",viewApp:"查看App",editApp:" 编辑App",errors:"该项为必填项",name:"App名称",desc:"备注",expired:"到期日期",status:"状态",enable:"允许访问",disable:"拒绝访问",enableText:"允许访问",disableText:"拒绝访问",expiredText:"永不过期",guide:"应用用于 EMQ X 管理监控 API (REST API) 连接认证，详见",docs:"文档"},users:{newUser:"新建用户",editUser:"编辑用户",username:"用户名",remark:"备注",password:"密码",confirmPassword:"确认密码",oldPassword:"旧密码",newPassword:"新密码",confirmNewPassword:"确认新密码",changePassword:"修改密码",dontChangePassword:"不修改密码",usernameRequired:"请填写用户名",remarkRequired:"请填写备注",usernameIllegal:"用户名长度: 3~32",passwordRequired:"请填写密码",newPasswordRequired:"请填写新密码",passwordInconsistent:"密码不一致",authenticate:"你已成功修改已登录用户密码，请重新登录",createUser:"新建用户成功",passwordIllegal:"密码长度: 3~255"},alert:{required:"字段是必填项",success:"成功",failure:"失败",connect:"连接"},
         login:{
             title:"Вхід",
             username:"Користувач",
@@ -335,50 +338,27 @@ webpackJsonp([23],{
             error:"用户名或密码错误",
             usernameRequired:"请填写用户名",
             passwordRequired:"请填写密码"},
-    settings:{
-        language:"Мова",
-        apply:"Зберегти",
-        success:"Зміни збережено"
-    },
-    config:{
-        importConfig:"导入配置",
-        selectConfigFile:"选择配置文件",
-        configFileMustBeJson:"请确保备份文件为正常 JSON 格式",
-        createBy:"由",
-        create:"创建",
-        createUser:"创建用户",
-        nodeName:"节点名称",
-        host:"主机地址",
-        descr:"备注信息",
-        createAt:"创建时间",
-        more:"更多信息",
-        reSelect:"重新选择",
-        not_a_valid_config_file:"不是合法的配置文件",
-        payload_error:"无效的内容",import_file_error:"导入文件出错",exportConfig:"导出配置",ex:"导出",atLeastThree:"至少3个字符",
-        importSuccess:"导入成功",notice:"使用备份的配置文件进行配置初始化/修改。<br/>注意: 配置文件可能包含有重要数据如数据库地址与认证信息，请妥善保管配置文件并合理使用备份功能。"},
-        help:{
-            quickStart:"快速开始",
-            emqxDesc:"EMQ X 基于 Erlang/OTP 平台开发的 MQTT 消息服务器，是开源社区中最流行的 MQTT 消息服务器，支持丰富的物联网协议，包括 MQTT、LwM2M、MQTT-SN、CoAP、 LoRaWAN、 HTTP 和 WebSocket 等。欢迎 follow 我们的项目或参与构建。",
-            useDocs:"使用文档",
-            docsDesc:"我们为您准备了齐全的使用文档，帮助您熟悉更多强大的功能。",
-            forwardView:"前往查看"
+        settings:{
+            language:"Мова",
+            apply:"Зберегти",
+            success:"Зміни збережено"
         },
-        analysis:{
-            topicMetrics:"主题监控",
-            metricsTip:"（数据统计为实时刷新数据，包含自添加以来全部统计数据）",
-            messageIn:"消息流入",
-            messageOut:"消息流出",
-            messageDrop:"消息丢弃",
-            addTopic:"添加主题",
-            details:"详情数据",
-            all:"全部",
-            rateItem:"{0} 条/秒",
-            rate:"（速率）",
-            messageInDesc:"（消息流入速率）",
-            messageOutDesc:"（消息流出速率）",
-            messageDropDesc:"（消息丢弃速率）",
-            loadAnalysis:"启用",
-            loadSuccess:"启用成功"
+        config:{
+            importConfig:"导入配置",
+            selectConfigFile:"选择配置文件",
+            configFileMustBeJson:"请确保备份文件为正常 JSON 格式",
+            createBy:"由",
+            create:"创建",
+            createUser:"创建用户",
+            nodeName:"节点名称",
+            host:"主机地址",
+            descr:"备注信息",
+            createAt:"创建时间",
+            more:"更多信息",
+            reSelect:"重新选择",
+            not_a_valid_config_file:"不是合法的配置文件",
+            payload_error:"无效的内容",import_file_error:"导入文件出错",exportConfig:"导出配置",ex:"导出",atLeastThree:"至少3个字符",
+            importSuccess:"导入成功",notice:"使用备份的配置文件进行配置初始化/修改。<br/>注意: 配置文件可能包含有重要数据如数据库地址与认证信息，请妥善保管配置文件并合理使用备份功能。"
         },
         httpCode:{
             0:"成功",
@@ -705,7 +685,7 @@ cHtD:function(e,t,n){
 rBGa:function(e,t){},
 w7XY:function(e,t,n){
     "use strict";
-    var b1 = sessionStorage.base || JSON.stringify({proto: "http", host: "127.0.0.1", mgmt_port: 8080}),
+    var b1 = sessionStorage.base || JSON.stringify({proto: "http", host: "127.0.0.1", mgmt_port: 8081}),
         x1 = JSON.parse(b1),
         b2 = x1.proto+"://"+x1.host+":"+x1.mgmt_port+"/api/v4";
 
