@@ -3,6 +3,6 @@
 	{vsn, "4.2"},
 	{modules, []},
 	{registered, [emqx_dashboard]},
-	{applications, [kernel, stdlib, minirest, clique, minirest, emqx_management, emqx]},
+	{applications, [kernel, stdlib, minirest, clique, minirest, emqx]},
 	{mod, {emqx_dashboard, []}}
 ]}.
